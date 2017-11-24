@@ -23,8 +23,9 @@
                 data: {{ values }},
                 backgroundColor: {{ background_color|safe }},
                 borderColor : {{ border_color|safe }},
-                borderWidth : 1.5
-            }]
+                borderWidth : 1.5,
+            }],
+
         },
         options: {
             title : {
@@ -34,6 +35,7 @@
                     fontSize:25,
                     padding:20
             },
+
             tooltips: {
                 callbacks : {
 
@@ -57,12 +59,20 @@
                     }
                     
                 }
+            },
+
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return value.toLocaleString();
+                        }
+                    }
+                }]
             }
         }
     });
 
 </script>
-
-
 
 {% endblock %}
