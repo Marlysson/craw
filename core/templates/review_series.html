@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+
+<div style="width:80vw;height:600px;margin:20px auto;">
+	<canvas id="myChart"></canvas>	
+</div>
+
+<canvas id="pie"></canvas>	
+
+{% endblock %}
+
+{% block script %}
+
+<script type="text/javascript">
+
+	var ctx = document.getElementById("myChart");
+	var myChart = new Chart(ctx, {
+	    type: 'bar',
+	    data: {
+	        labels:{{ labels|safe }},
+	        datasets: [{
+	            label: 'Porcentagem',
+	            data: {{ values }},
+	            backgroundColor: {{ colors|safe }}
+	        }]
+	    },
+	    options: {
+	    	title : {
+	    			position:"top",
+	    			display:true,
+	    			text:"Review das séries",
+	    			fontSize:25,
+	    			padding:20
+	    	},	
+	        legend: {
+	        	position:"right",
+	            display: true
+        	}
+	    }
+	});
+
+</script>
+
+<script type="text/javascript">
+var ctx = document.getElementById("pie");
+myPieChart = new Chart(ctx,{
+    type: 'doughnut',
+    data : {{ pie_chart|safe}},
+    labels: {{ pie_labels|safe}}
+});
+</script>
+
+{% endblock %}
