@@ -1,30 +1,20 @@
 from django.shortcuts import render
-from django.conf import settings
-import json
-from random import sample
+from .utils import load_formatted, generate_colors
 
 def view_world_cup_expenses(request):
 
-	content = open(settings.BASE_DIR+"/core/data/spent_world_cup.csv").readlines()
+	content = load_formatted("spent_world_cup.csv")
 
-	head = content[0]
-	content = content[1:]
+	labels = [line["nome"] for line in content]
+	values = [float(line["valor"].strip()) for line in content]
 
-	labels = list(map(lambda x : x.strip().split(";")[0].strip(),content))
-	values = list(map(lambda x : float(x.strip().split(";")[1]),content))
+	background_color, border_color = generate_colors(len(labels),alpha=0.2)
 
-	all_colors = []
-
-	for _ in range(len(labels)):
-		colors = sample(range(0,256),3)
-		colors = ",".join(list(map(str,colors)))
-		colors = "rgb({})".format(colors)
-		all_colors.append(colors)
-	
 	context = {
-		"labels":labels,
-		"values":values,
-		"colors":all_colors
+		"labels": labels,
+		"values": values,
+		"background_color": background_color,
+		"border_color": border_color
 	}
 
 	return render(request,"world-cup.html",context)
@@ -32,7 +22,7 @@ def view_world_cup_expenses(request):
 
 def series_review(request):
 
-	content = open(settings.BASE_DIR+"/core/data/series_infos.csv").readlines()
+	# content = open(settings.BASE_DIR+"/core/data/series_infos.csv").readlines()
 
 	head = content[0]
 	content = content[1:]

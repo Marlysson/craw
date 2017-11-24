@@ -3,7 +3,7 @@
 {% block content%}
 
 <div style="width:70vw;margin:20px auto;">
-	<canvas id="myChart"></canvas>	
+    <canvas id="myChart"></canvas>  
 </div>
 
 
@@ -13,27 +13,53 @@
 
 <script type="text/javascript">
 
-	var ctx = document.getElementById("myChart");
-	var myChart = new Chart(ctx, {
-	    type: 'bar',
-	    data: {
-	        labels:{{ labels|safe }},
-	        datasets: [{
-	            label: 'Milhões',
-	            data: {{ values }},
-	            backgroundColor: {{ colors|safe }},
-	        }]
-	    },
-	    options: {
-	    	title : {
-	    			position:"top",
-	    			display:true,
-	    			text:"Gasto por estado na copa do mundo 2014",
-	    			fontSize:25,
-	    			padding:20
-	    	},	
-	    }
-	});
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels:{{ labels|safe }},
+            datasets: [{
+                label: 'Valores gastos estimados',
+                data: {{ values }},
+                backgroundColor: {{ background_color|safe }},
+                borderColor : {{ border_color|safe }},
+                borderWidth : 1.5
+            }]
+        },
+        options: {
+            title : {
+                    position:"top",
+                    display:true,
+                    text:"Gasto por estado na copa do mundo de 2014",
+                    fontSize:25,
+                    padding:20
+            },
+            tooltips: {
+                callbacks : {
+
+                    title : function(tooltipItem,chart){
+                        
+                        value = tooltipItem[0].yLabel;
+
+                        if ( value < 999999.99){
+                            return "Gasto em Milhares";
+                        }else if ( value < 999999999.99){
+                            return "Gasto em Milhões";  
+                        }else{
+                            return "Gasto em Bilhões";
+                        }
+                                                
+                    },
+
+                    label : function(tooltipItem,chart){
+                        number = new Number(tooltipItem.yLabel);
+                        return number.toLocaleString(undefined, {maximumFractionDigits:2})
+                    }
+                    
+                }
+            }
+        }
+    });
 
 </script>
 
