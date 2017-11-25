@@ -1,52 +1,109 @@
 import xml.etree.ElementTree as ET
-from collections import OrderedDict
-import os
+from collections import OrderedDict,defaultdict
+from os.path import join, dirname, exists, getsize
 import requests
 from utils import save_csv
 from bs4 import BeautifulSoup
 
 URL = "http://www.portaltransparencia.gov.br/copa2014/api/rest/empreendimento"
 
-file_name = "world_cup_expense.xml"
+file_path = join(dirname(dirname(__file__)),"data","world_cup_expense.xml")
 
+completed_spent_data = []
+type_of_constructions = defaultdict(int)
+type_institution = defaultdict(int)
+ufs = {}
+
+def calculate_executed_value(negotiated_value,percentual):
+	return negotiated_value * percentual / 100
+	
 def is_valid_file():
-	if os.path.exists(file_name):
-		if os.path.getsize(file_name) > 0:
+	if exists(file_path):
+		if getsize(file_path) > 0:
 			return True
 		return False
 	return False
 		 
 
 if not is_valid_file():
-	with open(file_name,"w") as xml:
+	with open(file_path,"w") as xml:
 		content = requests.get(URL).text
 		xml.write(content)
 
-with open(file_name) as xml:
+with open(file_path) as xml:
 	root = ET.fromstring(xml.read())
 
-data = {}
+for children in root:
+	uf = children.find("uf")
 
-for spent in root:
+	if uf:
+		_id = uf.find("id").text
+		ufs[_id] = uf.find("nome").text
+	
+for index,spent in enumerate(root):
+	'''
+	 Fields to collect
 
-	try:
-		value = spent.find("valorTotalPrevisto").text
-		uf = spent.find("uf").find("nome").text
-		if uf in data:
-			data[uf] += float(value)
+	 	- Uf ok
+	 	- Tema( descrição ) ok
+	 		- Aeroportos
+	 		- Esportes
+	 		- Turismos
+	 	- Valor Total Previsto ok
+	 	- Valor Total Executado ok
+	 	- Tipo Instituição ok
+	   - Instituição ok
+	 	- Quantidade de obras no estado ( In memory process)
+	'''
+
+	negotiated = spent.find("valorTotalPrevisto")
+
+	# Removing all "empreendimentos" that haven't negotiated value defined
+	if negotiated is not None:
+
+		theme = spent.find("tema").find("descricao").text		
+		
+		institution = spent.find("instituicao")
+		name_institution = institution.find("nome").text.capitalize()
+		part_institution = institution.find("tipoInstituicao").find('descricao').text
+
+		city = spent.find("cidadeSede")
+
+		uf_xml = city.find("uf")
+
+		status = spent.find("andamento").find("descricao").text
+
+		if uf_xml:
+			uf_name = uf_xml.find("nome").text
 		else:
-			data[uf] = float(value)
-	except:
-		pass
+			id_uf = city.find("id").text
+			uf_name = ufs.get(id_uf)
 
-def total_spent():
-	return sum(data.values())
+		negotiated = float(negotiated.text)
 
-formatted = [OrderedDict([("nome",nome),("valor",round(valor,2))]) for nome,valor in data.items()]
-print("Total gasto: {:,.2f}".format(total_spent()))
+		executed = spent.find("valorPercentualExecucaoFisica")
 
-for data in formatted:
-	data = dict(data)
-	print("{}:{:,.2f}".format(data["nome"],data["valor"]))
+		if executed is None:
+			executed = 100
+		else:
+			executed = float(executed.text)
 
-save_csv("spent_world_cup.csv",data=formatted)
+		spent_data = {}
+		spent_data["uf"] = uf_name
+		spent_data["tema"] = theme
+		spent_data["tipo_instituicao"] = part_institution
+		spent_data["instituicao"] = name_institution
+		spent_data["status"] = status
+		spent_data["negociado"] = negotiated
+		spent_data["executado"] = calculate_executed_value(negotiated,executed)
+
+		completed_spent_data.append(spent_data)		
+
+print([item for item in completed_spent_data if item["status"] != "Concluído"][0])
+
+# # formatted = [OrderedDict([("nome",nome),("valor",round(valor,2))]) for nome,valor in data.items()]
+
+# # save_csv("spent_world_cup.csv",data=formatted)
+
+# print(type_of_constructions)
+# print(type_institution)

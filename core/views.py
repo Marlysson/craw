@@ -9,7 +9,7 @@ def view_world_cup_expenses(request):
 	values = [float(line["valor"].strip()) for line in content]
 
 	background_color, border_color = generate_colors(len(labels),alpha=0.2)
-
+	
 	context = {
 		"labels": labels,
 		"values": values,
