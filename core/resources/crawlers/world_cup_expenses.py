@@ -88,4 +88,4 @@ for spent in root:
 
         completed_spent_data.append(spent_data)     
 
-save_csv("spent_world_cup.csv",data=completed_spent_data)
+save_csv(__file__, completed_spent_data)

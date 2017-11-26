@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-from utils import save_csv
+from utils import save_csv, save_file_as
 from collections import OrderedDict
 
 URL = "http://www.imdb.com/chart/boxoffice"
@@ -28,4 +28,4 @@ for film_info in content_table.find_all("tr"):
 
 	data.append(item)
 
-save_csv("films_data.csv",data=data)
+save_csv(__file__,data=data)

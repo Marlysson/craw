@@ -68,4 +68,4 @@ while next_link:
 		next_page = URL_BASE + next_link.get("href")
 		parser = get_parsed_content(next_page)
 
-save_csv("countries.csv",data)
+save_csv(__file__,data)

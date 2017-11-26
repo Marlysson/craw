@@ -11,17 +11,22 @@ URL_RESOURCES = {
     "world_cup": "http://www.portaltransparencia.gov.br/copa2014/api/rest/empreendimento"
 }
 
+def save_file_as(scope):
+    filename = scope.split(".")[0] + ".csv"
+    return filename
+
 def browser():
 
     address = path.join(CRAWLER_DIR,"phantomjs.exe")
     return webdriver.PhantomJS(address)
-
 
 def save_csv(file=None,data=None):
     if not file:
         raise ValueError("File wasn't found")
     if not data:
         raise ValueError("The 'data' attribute should be filled")
+
+    file = save_file_as(file)
 
     file_path = path.join(DATA_DIR,file)
 

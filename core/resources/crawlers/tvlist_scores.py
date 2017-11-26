@@ -24,8 +24,8 @@ for movie in movies:
 
 	movie = OrderedDict()
 	movie["nome"] = name
-	movie["classificacao"] = score
+	movie["classificacao"] = score.replace("%","")
 	
 	data.append(movie)
 
-save_csv("movies_infos.csv",data)
+save_csv(__file__,data)
