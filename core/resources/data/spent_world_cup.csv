@@ -1,188 +1,188 @@
-uf;tema;tipo_instituicao;instituicao;status;negociado;executado
-Minas Gerais;Estádios;Governo Estadual;Governo do estado de minas gerais;Concluído;695000000.0;695000000.0
-Distrito Federal;Estádios;Governo Distrital;Governo do distrito federal;Concluído;1403300000.0;1403300000.0
-Mato Grosso;Estádios;Governo Estadual;Governo do estado de mato grosso;Concluído;596400000.0;596400000.0
-Ceará;Estádios;Governo Estadual;Governo do estado do ceará;Concluído;518606000.0;518606000.0
-Amazonas;Estádios;Governo Estadual;Governo do estado de amazonas;Concluído;660500000.0;660500000.0
-Rio Grande do Norte;Estádios;Governo Estadual;Governo do estado do rio grande do norte;Em andamento;400000000.0;400000000.0
-Pernambuco;Estádios;Governo Estadual;Governo do estado de pernambuco;Concluído;532600000.0;532600000.0
-São Paulo;Aeroportos;Governo Federal;Infraero;Concluído;235510000.0;235510000.0
-Ceará;Aeroportos;Governo Federal;Infraero;Em andamento;171110000.0;27377600.0
-Rio Grande do Norte;Aeroportos;Governo Federal;Infraero;Em andamento;383400000.0;383400000.0
-Rio Grande do Norte;Aeroportos;Governo Federal;Infraero;Concluído;189150000.0;189150000.0
-São Paulo;Aeroportos;Governo Federal;Infraero;Concluído;83650000.0;83650000.0
-Mato Grosso;Aeroportos;Governo Federal;Infraero;Em andamento;98680000.0;75983600.0
-Mato Grosso;Aeroportos;Governo Federal;Infraero;Concluído;2530000.0;2530000.0
-Amazonas;Aeroportos;Governo Federal;Infraero;Em andamento;445070000.0;427267200.0
-São Paulo;Aeroportos;Governo Federal;Infraero;Concluído;183530000.0;183530000.0
-São Paulo;Aeroportos;Governo Federal;Infraero;Em andamento;4910000.0;4910000.0
-Distrito Federal;Aeroportos;Governo Federal;Infraero;Em andamento;4810000.0;4810000.0
-Minas Gerais;Aeroportos;Governo Federal;Infraero;Em andamento;218570000.0;113656400.0
-Minas Gerais;Aeroportos;Governo Federal;Infraero;Em andamento;184700000.0;96044000.0
-Paraná;Aeroportos;Governo Federal;Infraero;Em andamento;110160000.0;41860800.0
-Paraná;Aeroportos;Governo Federal;Infraero;Concluído;28040000.0;28040000.0
-Paraná;Aeroportos;Governo Federal;Infraero;Concluído;19060000.0;19060000.0
-Rio de Janeiro;Aeroportos;Governo Federal;Infraero;Em andamento;115860000.0;63723000.0
-Rio de Janeiro;Aeroportos;Governo Federal;Infraero;Em andamento;188690000.0;152838900.0
-Rio de Janeiro;Aeroportos;Governo Federal;Infraero;Concluído;139100000.0;139100000.0
-Bahia;Aeroportos;Governo Federal;Infraero;Em andamento;79230000.0;50707200.0
-Bahia;Aeroportos;Governo Federal;Infraero;Concluído;17560000.0;17560000.0
-Bahia;Aeroportos;Governo Federal;Infraero;Concluído;16140000.0;16140000.0
-Rio Grande do Sul;Aeroportos;Governo Federal;Infraero;Em andamento;58990000.0;2359600.0
-Rio Grande do Sul;Aeroportos;Governo Federal;Infraero;Concluído;4950000.0;4950000.0
-Ceará;Portos;Governo Federal;Secretaria de portos da presidência da república;Em andamento;224000000.0;215040000.0
-Amazonas;Portos;Governo Federal;Departamento nacional de infraestrutura de transportes - dnit;Em andamento;71100000.0;67545000.0
-Rio Grande do Norte;Portos;Governo Federal;Secretaria de portos da presidência da república;Em andamento;79800000.0;79800000.0
-Pernambuco;Portos;Governo Estadual;Porto do recife s/a;Concluído;28100000.0;28100000.0
-Bahia;Portos;Governo Federal;Secretaria de portos da presidência da república;Em andamento;40700000.0;36630000.0
-São Paulo;Portos;Governo Federal;Secretaria de portos da presidência da república;Em andamento;154000000.0;154000000.0
-Rio de Janeiro;Estádios;Governo Estadual;Governo do estado do rio de janeiro;Concluído;1050000000.0;1050000000.0
-Minas Gerais;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de belo horizonte;Em andamento;726413690.11;668300594.9012
-Minas Gerais;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de belo horizonte;Em andamento;161605629.37;161605629.37
-Minas Gerais;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de belo horizonte;Em andamento;75449801.33;75449801.33
-Minas Gerais;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de belo horizonte;Concluído;31600000.0;31600000.0
-Bahia;Estádios;Governo Estadual;Governo do estado da bahia;Concluído;689400000.0;689400000.0
-Minas Gerais;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de belo horizonte;Concluído;129616902.75;129616902.75
-Minas Gerais;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de belo horizonte;Em andamento;55312530.55;55312530.55
-Paraná;Estádios;Entidade Privada;Concessionário;Em andamento;391500000.0;391500000.0
-Minas Gerais;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de belo horizonte;Concluído;233361933.71;233361933.71
-Rio Grande do Sul;Estádios;Entidade Privada;Concessionário;Em andamento;366300000.0;366300000.0
-São Paulo;Estádios;Entidade Privada;Sport club corinthians paulista;Concluído;1080000000.0;1080000000.0
-Distrito Federal;Mobilidade Urbana;Governo Distrital;Governo do distrito federal;Concluído;54250000.0;54250000.0
-Mato Grosso;Mobilidade Urbana;Governo Estadual;Governo do estado de mato grosso;Em andamento;52900000.0;50255000.0
-Mato Grosso;Mobilidade Urbana;Governo Estadual;Secretaria extraordinária da copa do mundo fifa 2014;Em andamento;1577600000.0;1009664000.0
-Mato Grosso;Mobilidade Urbana;Governo Estadual;Governo do estado de mato grosso;Em andamento;76000000.0;59280000.0
-Paraná;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de curitiba;Em andamento;165300000.0;163647000.0
-Paraná;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de curitiba;Em andamento;61260000.0;60647400.0
-Paraná;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de curitiba;Em andamento;47830783.8;47830783.8
-Paraná;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de curitiba;Em andamento;28123951.3;27280232.761
-Paraná;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de curitiba;Em andamento;12600000.0;5292000.0
-Paraná;Mobilidade Urbana;Governo Estadual;Governo do estado do paraná;Em andamento;30500000.0;18300000.0
-Paraná;Mobilidade Urbana;Governo Estadual;Governo do estado do paraná;Em andamento;56349467.22;30428712.298800003
-Mato Grosso;Telecomunicações;Governo Federal;Anatel;Em andamento;171050000.0;150524000.0
-Mato Grosso;Telecomunicações;Governo Federal;Telebras;Concluído;200170000.0;200170000.0
-Minas Gerais;Aeroportos;Governo Federal;Infraero;Concluído;26820000.0;23869800.0
-Distrito Federal;Aeroportos;Governo Federal;Infraero;Em andamento;4160000.0;3494400.0
-Distrito Federal;Aeroportos;Entidade Privada;Concessionário;Em andamento;642400000.0;642400000.0
-Ceará;Mobilidade Urbana;Governo Estadual;Governo do estado do ceará;Em andamento;307519777.86;156835086.7086
-Ceará;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de fortaleza;Em andamento;152000000.0;24320000.0
-Rio de Janeiro;Mobilidade Urbana;Governo Municipal;Prefeitura municipal do rio de janeiro;Em andamento;1969606211.94;1949910149.8206
-Pernambuco;Mobilidade Urbana;Governo Estadual;Governo do estado de pernambuco;Em andamento;196000000.0;180320000.0
-Pernambuco;Mobilidade Urbana;Governo Estadual;Governo do estado de pernambuco;Em andamento;197700000.0;154206000.0
-Pernambuco;Mobilidade Urbana;Governo Estadual;Governo do estado de pernambuco;Em andamento;146100000.0;115419000.0
-Pernambuco;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de recife;Em andamento;430436469.19;426132104.4981
-Pernambuco;Mobilidade Urbana;Governo Estadual;Governo do estado de pernambuco;Concluído;24500000.0;24500000.0
-Ceará;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de fortaleza;Em andamento;41600000.0;3744000.0
-Ceará;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de fortaleza;Em andamento;41400000.0;31050000.0
-Ceará;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de fortaleza;Em andamento;65900000.0;47448000.0
-Ceará;Mobilidade Urbana;Governo Estadual;Governo do estado do ceará;Em andamento;43500000.0;23055000.0
-Rio Grande do Norte;Mobilidade Urbana;Governo Estadual;Governo do estado do rio grande do norte;Em andamento;73100000.0;24123000.0
-Rio Grande do Norte;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de natal;Em andamento;370947996.91;244825677.96060002
-São Paulo;Aeroportos;Entidade Privada;Concessionária aeroportos brasil viracopos s/a;Em andamento;1180000000.0;1097400000.0
-Minas Gerais;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de belo horizonte;Não iniciado;1845612.86;55368.385800000004
-Minas Gerais;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de belo horizonte;Não iniciado;721630.77;122677.2309
-Ceará;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de fortaleza;Não iniciado;22054872.44;5734266.834400001
-Minas Gerais;Desenvolvimento Turístico;Governo Estadual;Governo do estado de minas gerais;Não iniciado;1796227.52;0.0
-Minas Gerais;Desenvolvimento Turístico;Governo Estadual;Governo do estado de minas gerais;Em andamento;290508.56;0.0
-Amazonas;Desenvolvimento Turístico;Governo Estadual;Governo do estado de amazonas;Não iniciado;2046153.85;40923.077000000005
-Rio Grande do Norte;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de natal;Não iniciado;3904950.37;0.0
-Rio Grande do Norte;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de natal;Concluído;363151.84;257837.8064
-Distrito Federal;Desenvolvimento Turístico;Governo Distrital;Governo do distrito federal;Não iniciado;4053439.85;202671.9925
-Rio Grande do Norte;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de natal;Em andamento;14977329.23;6739798.1535
-Distrito Federal;Desenvolvimento Turístico;Governo Distrital;Governo do distrito federal;Não iniciado;286461.54;286461.54
-Rio Grande do Sul;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de porto alegre;Não iniciado;278149.39;0.0
-Rio Grande do Sul;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de porto alegre;Não iniciado;7527835.01;0.0
-Mato Grosso;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de cuiabá;Não iniciado;1668896.32;0.0
-Rio Grande do Sul;Desenvolvimento Turístico;Governo Estadual;Governo do estado do rio grande do sul;Não iniciado;4975100.98;0.0
-Mato Grosso;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de cuiabá;Não iniciado;1526483.84;0.0
-Pernambuco;Desenvolvimento Turístico;Governo Estadual;Governo do estado de pernambuco;Não iniciado;3234817.82;0.0
-Rio de Janeiro;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal do rio de janeiro;Não iniciado;18424615.38;0.0
-Paraná;Desenvolvimento Turístico;Governo Estadual;Governo do estado do paraná;Não iniciado;1509851.29;30197.0258
-Bahia;Desenvolvimento Turístico;Governo Estadual;Governo do estado da bahia;Não iniciado;6699079.84;0.0
-São Paulo;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de são paulo;Concluído;972410.26;700135.3872
-Paraná;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de curitiba;Não iniciado;12839382.32;0.0
-Mato Grosso;Segurança Pública;Governo Federal;Sesge/min. justiça;Não iniciado;39000000.0;39000000.0
-Mato Grosso;Segurança Pública;Governo Federal;Sesge/min. justiça;Não iniciado;16200000.0;12150000.0
-Mato Grosso;Segurança Pública;Governo Federal;Sesge/min. justiça;Em andamento;322000000.0;289800000.0
-Mato Grosso;Segurança Pública;Governo Federal;Comando da aeronáutica;Concluído;247798191.38;247798191.38
-Mato Grosso;Segurança Pública;Governo Federal;Comando da aeronáutica;Concluído;1060000.0;1060000.0
-Mato Grosso;Segurança Pública;Governo Federal;Comando do exército;Concluído;52342106.14;51818685.0786
-Mato Grosso;Segurança Pública;Governo Federal;Comando do exército;Concluído;34403714.55;31307380.240499996
-Mato Grosso;Segurança Pública;Governo Federal;Comando do exército;Concluído;9552245.28;9170155.468799999
-Mato Grosso;Segurança Pública;Governo Federal;Comando do exército;Concluído;34940615.51;34591209.354899995
-Mato Grosso;Segurança Pública;Governo Federal;Comando do exército;Concluído;10290117.97;9981414.4309
-Mato Grosso;Segurança Pública;Governo Federal;Comando do exército;Concluído;41268696.29;40030635.4013
-Mato Grosso;Segurança Pública;Governo Federal;Comando do exército;Concluído;59565050.42;57182448.4032
-Mato Grosso;Segurança Pública;Governo Federal;Comando do exército;Concluído;3158801.62;3064037.5714
-Mato Grosso;Segurança Pública;Governo Federal;Comando da marinha;Concluído;16681075.5;16681075.5
-Mato Grosso;Segurança Pública;Governo Federal;Estado-maior conjunto das forças armadas-md;Concluído;1712868.82;1712868.82
-Mato Grosso;Segurança Pública;Governo Federal;Comando da marinha;Concluído;1179794.63;1179794.63
-Mato Grosso;Segurança Pública;Governo Federal;Comando da marinha;Concluído;122542892.96;122542892.96
-Mato Grosso;Segurança Pública;Governo Federal;Comando da marinha;Concluído;27991377.13;25192239.417
-Mato Grosso;Segurança Pública;Governo Federal;Comando da marinha;Concluído;2077825.63;2077825.63
-Mato Grosso;Segurança Pública;Governo Federal;Comando da marinha;Concluído;23124338.13;22430607.986100003
-Mato Grosso;Segurança Pública;Governo Federal;Comando da marinha;Concluído;1736428.04;1736428.04
-Rio Grande do Sul;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de porto alegre;Concluído;8000000.0;8000000.0
-Pernambuco;Mobilidade Urbana;Governo Estadual;Governo do estado de pernambuco;Concluído;25000000.0;25000000.0
-Rio de Janeiro;Mobilidade Urbana;Governo Municipal;Prefeitura municipal do rio de janeiro;Concluído;109000000.0;109000000.0
-Rio de Janeiro;Mobilidade Urbana;Governo Estadual;Governo do estado do rio de janeiro;Em andamento;178100000.0;163852000.0
-Bahia;Mobilidade Urbana;Governo Estadual;Governo do estado da bahia;Concluído;12400000.0;12400000.0
-Bahia;Mobilidade Urbana;Governo Estadual;Governo do estado da bahia;Em andamento;7200000.0;2376000.0
-São Paulo;Mobilidade Urbana;Governo Estadual;Governo do estado de são paulo;Em andamento;610507000.0;598296860.0
-São Paulo;Aeroportos;Entidade Privada;Concessionário;Em andamento;1420000000.0;1391600000.0
-Pernambuco;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de recife;Concluído;7400000.0;7400000.0
-Minas Gerais;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de belo horizonte;Não iniciado;3671571.88;0.0
-Pernambuco;Desenvolvimento Turístico;Governo Estadual;Governo do estado de pernambuco;Não iniciado;7547908.23;75479.08230000001
-Pernambuco;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de recife;Não iniciado;4917948.72;49179.487199999996
-Paraná;Mobilidade Urbana;Governo Estadual;Governo do estado do paraná;Em andamento;20390326.5;10399066.515
-Paraná;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de curitiba;Em andamento;39430000.0;39035700.0
-Paraná;Mobilidade Urbana;Governo Estadual;Governo do estado do paraná;Em andamento;65200000.0;38468000.0
-Mato Grosso;Outros;Governo Federal;Ministério do esporte;Em andamento;28136514.2;28136514.2
-Mato Grosso;Outros;Governo Federal;Ministério do esporte;Concluído;13257140.67;13257140.67
-Mato Grosso;Outros;Governo Federal;Ministério do esporte;Concluído;49600.0;49600.0
-Mato Grosso;Segurança Pública;Governo Federal;Sesge/min. justiça;Em andamento;20500000.0;15170000.0
-Mato Grosso;Segurança Pública;Governo Federal;Sesge/min. justiça;Em andamento;680500000.0;680500000.0
-Mato Grosso;Telecomunicações;Governo Federal;Ministério das comunicações;Concluído;33382652.87;33382652.87
-Ceará;Desenvolvimento Turístico;Banco Federal;Bnb;Em andamento;0.0;0.0
-Pernambuco;Desenvolvimento Turístico;Banco Federal;Bnb;Em andamento;0.0;0.0
-Rio Grande do Norte;Desenvolvimento Turístico;Banco Federal;Bnb;Em andamento;0.0;0.0
-Pernambuco;Desenvolvimento Turístico;Banco Federal;Bnb;Não iniciado;0.0;0.0
-Minas Gerais;Instalações Complementares (Copa das Confederações);Governo Estadual;Governo do estado de minas gerais;Concluído;38300000.0;38300000.0
-Distrito Federal;Instalações Complementares (Copa das Confederações);Governo Distrital;Governo do distrito federal;Concluído;27000000.0;27000000.0
-Ceará;Instalações Complementares (Copa das Confederações);Governo Estadual;Governo do estado do ceará;Concluído;27400000.0;27400000.0
-Pernambuco;Instalações Complementares (Copa das Confederações);Governo Estadual;Governo do estado de pernambuco;Concluído;35700000.0;35700000.0
-Rio de Janeiro;Instalações Complementares (Copa das Confederações);Governo Estadual;Governo do estado do rio de janeiro;Concluído;37700000.0;37700000.0
-Bahia;Instalações Complementares (Copa das Confederações);Governo Estadual;Governo do estado da bahia;Concluído;34000000.0;34000000.0
-Rio Grande do Sul;Mobilidade Urbana;Governo Municipal;Prefeitura municipal de porto alegre;Em andamento;8700000.0;7395000.0
-Pernambuco;Desenvolvimento Turístico;Banco Federal;Bnb;Não iniciado;0.0;0.0
-Amazonas;Desenvolvimento Turístico;Governo Estadual;Governo do estado de amazonas;Não iniciado;5920864.23;59208.64230000001
-Bahia;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de salvador;Não iniciado;8800920.16;0.0
-Bahia;Desenvolvimento Turístico;Banco Federal;Bnb;Não iniciado;0.0;0.0
-Pernambuco;Desenvolvimento Turístico;Banco Federal;Bnb;Não iniciado;0.0;0.0
-Pernambuco;Desenvolvimento Turístico;Banco Federal;Bnb;Não iniciado;0.0;0.0
-Pernambuco;Desenvolvimento Turístico;Banco Federal;Bnb;Não iniciado;0.0;0.0
-Mato Grosso;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de cuiabá;Não iniciado;853846.15;0.0
-Paraná;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de curitiba;Não iniciado;3787282.05;0.0
-São Paulo;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de são paulo;Não iniciado;21695652.17;0.0
-São Paulo;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal de são paulo;Em andamento;2500000.0;0.0
-Mato Grosso;Outros;Governo Federal;Ministério do esporte;Em andamento;9554852.28;6019556.9364
-;Comunicação;Governo Federal;Embratur - instituto brasileiro de turismo;Concluído;6600000.0;6600000.0
-Rio Grande do Sul;Aeroportos;Governo Federal;Infraero;Em andamento;23780000.0;19499600.0
-Mato Grosso;Segurança Pública;Governo Federal;Sesge/min. justiça;Em andamento;25000000.0;25000000.0
-Rio de Janeiro;Desenvolvimento Turístico;Entidade Privada;Arena leme hotel ltda;Em andamento;0.0;0.0
-Rio de Janeiro;Desenvolvimento Turístico;Governo Municipal;Prefeitura municipal do rio de janeiro;Não iniciado;515384.62;0.0
-Mato Grosso;Outros;Governo Federal;Ministério do esporte;Concluído;490389.8;490389.8
-Minas Gerais;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado de minas gerais;Concluído;37000000.0;37000000.0
-Distrito Federal;Instalações Complementares (Copa 2014);Governo Distrital;Governo do distrito federal;Concluído;28400000.0;28400000.0
-Ceará;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado do ceará;Concluído;27100000.0;27100000.0
-Pernambuco;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado de pernambuco;Concluído;33900000.0;33900000.0
-Rio de Janeiro;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado do rio de janeiro;Concluído;66000000.0;66000000.0
-Bahia;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado da bahia;Concluído;37000000.0;37000000.0
-Mato Grosso;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado de mato grosso;Concluído;35500000.0;35500000.0
-Paraná;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado do paraná;Concluído;26000000.0;26000000.0
-Amazonas;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado de amazonas;Concluído;123600000.0;123600000.0
-Rio Grande do Norte;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado do rio grande do norte;Concluído;30700000.0;30700000.0
-Rio Grande do Sul;Instalações Complementares (Copa 2014);Governo Estadual;Governo do estado do rio grande do sul;Concluído;25000000.0;25000000.0
-São Paulo;Instalações Complementares (Copa 2014);Entidade Privada;Arena fundo de investimento imobiliario - fii;Concluído;107900000.0;107900000.0
-Mato Grosso;Telecomunicações;Governo Federal;Ministério das comunicações;Concluído;145710450.0;145710450.0
-Mato Grosso;Segurança Pública;Governo Federal;Comando da aeronáutica;Concluído;3125504.58;3125504.58
+uf,tema,tipo_instituicao,instituicao,status,negociado,executado
+Minas Gerais,Estádios,Governo Estadual,Governo do Estado de Minas Gerais,Concluído,695000000.0,695000000.0
+Distrito Federal,Estádios,Governo Distrital,Governo do Distrito Federal,Concluído,1403300000.0,1403300000.0
+Mato Grosso,Estádios,Governo Estadual,Governo do Estado de Mato Grosso,Concluído,596400000.0,596400000.0
+Ceará,Estádios,Governo Estadual,Governo do Estado do Ceará,Concluído,518606000.0,518606000.0
+Amazonas,Estádios,Governo Estadual,Governo do Estado de Amazonas,Concluído,660500000.0,660500000.0
+Rio Grande do Norte,Estádios,Governo Estadual,Governo do Estado do rio Grande do Norte,Em Andamento,400000000.0,400000000.0
+Pernambuco,Estádios,Governo Estadual,Governo do Estado de Pernambuco,Concluído,532600000.0,532600000.0
+São Paulo,Aeroportos,Governo Federal,Infraero,Concluído,235510000.0,235510000.0
+Ceará,Aeroportos,Governo Federal,Infraero,Em Andamento,171110000.0,27377600.0
+Rio Grande do Norte,Aeroportos,Governo Federal,Infraero,Em Andamento,383400000.0,383400000.0
+Rio Grande do Norte,Aeroportos,Governo Federal,Infraero,Concluído,189150000.0,189150000.0
+São Paulo,Aeroportos,Governo Federal,Infraero,Concluído,83650000.0,83650000.0
+Mato Grosso,Aeroportos,Governo Federal,Infraero,Em Andamento,98680000.0,75983600.0
+Mato Grosso,Aeroportos,Governo Federal,Infraero,Concluído,2530000.0,2530000.0
+Amazonas,Aeroportos,Governo Federal,Infraero,Em Andamento,445070000.0,427267200.0
+São Paulo,Aeroportos,Governo Federal,Infraero,Concluído,183530000.0,183530000.0
+São Paulo,Aeroportos,Governo Federal,Infraero,Em Andamento,4910000.0,4910000.0
+Distrito Federal,Aeroportos,Governo Federal,Infraero,Em Andamento,4810000.0,4810000.0
+Minas Gerais,Aeroportos,Governo Federal,Infraero,Em Andamento,218570000.0,113656400.0
+Minas Gerais,Aeroportos,Governo Federal,Infraero,Em Andamento,184700000.0,96044000.0
+Paraná,Aeroportos,Governo Federal,Infraero,Em Andamento,110160000.0,41860800.0
+Paraná,Aeroportos,Governo Federal,Infraero,Concluído,28040000.0,28040000.0
+Paraná,Aeroportos,Governo Federal,Infraero,Concluído,19060000.0,19060000.0
+Rio de Janeiro,Aeroportos,Governo Federal,Infraero,Em Andamento,115860000.0,63723000.0
+Rio de Janeiro,Aeroportos,Governo Federal,Infraero,Em Andamento,188690000.0,152838900.0
+Rio de Janeiro,Aeroportos,Governo Federal,Infraero,Concluído,139100000.0,139100000.0
+Bahia,Aeroportos,Governo Federal,Infraero,Em Andamento,79230000.0,50707200.0
+Bahia,Aeroportos,Governo Federal,Infraero,Concluído,17560000.0,17560000.0
+Bahia,Aeroportos,Governo Federal,Infraero,Concluído,16140000.0,16140000.0
+Rio Grande do Sul,Aeroportos,Governo Federal,Infraero,Em Andamento,58990000.0,2359600.0
+Rio Grande do Sul,Aeroportos,Governo Federal,Infraero,Concluído,4950000.0,4950000.0
+Ceará,Portos,Governo Federal,Secretaria de Portos da Presidência da República,Em Andamento,224000000.0,215040000.0
+Amazonas,Portos,Governo Federal,Departamento Nacional de Infraestrutura de Transportes - Dnit,Em Andamento,71100000.0,67545000.0
+Rio Grande do Norte,Portos,Governo Federal,Secretaria de Portos da Presidência da República,Em Andamento,79800000.0,79800000.0
+Pernambuco,Portos,Governo Estadual,Porto do Recife s/a,Concluído,28100000.0,28100000.0
+Bahia,Portos,Governo Federal,Secretaria de Portos da Presidência da República,Em Andamento,40700000.0,36630000.0
+São Paulo,Portos,Governo Federal,Secretaria de Portos da Presidência da República,Em Andamento,154000000.0,154000000.0
+Rio de Janeiro,Estádios,Governo Estadual,Governo do Estado do rio de Janeiro,Concluído,1050000000.0,1050000000.0
+Minas Gerais,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Em Andamento,726413690.11,668300594.9012
+Minas Gerais,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Em Andamento,161605629.37,161605629.37
+Minas Gerais,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Em Andamento,75449801.33,75449801.33
+Minas Gerais,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Concluído,31600000.0,31600000.0
+Bahia,Estádios,Governo Estadual,Governo do Estado da Bahia,Concluído,689400000.0,689400000.0
+Minas Gerais,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Concluído,129616902.75,129616902.75
+Minas Gerais,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Em Andamento,55312530.55,55312530.55
+Paraná,Estádios,Entidade Privada,Concessionário,Em Andamento,391500000.0,391500000.0
+Minas Gerais,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Concluído,233361933.71,233361933.71
+Rio Grande do Sul,Estádios,Entidade Privada,Concessionário,Em Andamento,366300000.0,366300000.0
+São Paulo,Estádios,Entidade Privada,Sport Club Corinthians Paulista,Concluído,1080000000.0,1080000000.0
+Distrito Federal,Mobilidade Urbana,Governo Distrital,Governo do Distrito Federal,Concluído,54250000.0,54250000.0
+Mato Grosso,Mobilidade Urbana,Governo Estadual,Governo do Estado de Mato Grosso,Em Andamento,52900000.0,50255000.0
+Mato Grosso,Mobilidade Urbana,Governo Estadual,Secretaria Extraordinária da Copa do Mundo Fifa 2014,Em Andamento,1577600000.0,1009664000.0
+Mato Grosso,Mobilidade Urbana,Governo Estadual,Governo do Estado de Mato Grosso,Em Andamento,76000000.0,59280000.0
+Paraná,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Curitiba,Em Andamento,165300000.0,163647000.0
+Paraná,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Curitiba,Em Andamento,61260000.0,60647400.0
+Paraná,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Curitiba,Em Andamento,47830783.8,47830783.8
+Paraná,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Curitiba,Em Andamento,28123951.3,27280232.761
+Paraná,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Curitiba,Em Andamento,12600000.0,5292000.0
+Paraná,Mobilidade Urbana,Governo Estadual,Governo do Estado do Paraná,Em Andamento,30500000.0,18300000.0
+Paraná,Mobilidade Urbana,Governo Estadual,Governo do Estado do Paraná,Em Andamento,56349467.22,30428712.298800003
+Mato Grosso,Telecomunicações,Governo Federal,Anatel,Em Andamento,171050000.0,150524000.0
+Mato Grosso,Telecomunicações,Governo Federal,Telebras,Concluído,200170000.0,200170000.0
+Minas Gerais,Aeroportos,Governo Federal,Infraero,Concluído,26820000.0,23869800.0
+Distrito Federal,Aeroportos,Governo Federal,Infraero,Em Andamento,4160000.0,3494400.0
+Distrito Federal,Aeroportos,Entidade Privada,Concessionário,Em Andamento,642400000.0,642400000.0
+Ceará,Mobilidade Urbana,Governo Estadual,Governo do Estado do Ceará,Em Andamento,307519777.86,156835086.7086
+Ceará,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Fortaleza,Em Andamento,152000000.0,24320000.0
+Rio de Janeiro,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal do rio de Janeiro,Em Andamento,1969606211.94,1949910149.8206
+Pernambuco,Mobilidade Urbana,Governo Estadual,Governo do Estado de Pernambuco,Em Andamento,196000000.0,180320000.0
+Pernambuco,Mobilidade Urbana,Governo Estadual,Governo do Estado de Pernambuco,Em Andamento,197700000.0,154206000.0
+Pernambuco,Mobilidade Urbana,Governo Estadual,Governo do Estado de Pernambuco,Em Andamento,146100000.0,115419000.0
+Pernambuco,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Recife,Em Andamento,430436469.19,426132104.4981
+Pernambuco,Mobilidade Urbana,Governo Estadual,Governo do Estado de Pernambuco,Concluído,24500000.0,24500000.0
+Ceará,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Fortaleza,Em Andamento,41600000.0,3744000.0
+Ceará,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Fortaleza,Em Andamento,41400000.0,31050000.0
+Ceará,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Fortaleza,Em Andamento,65900000.0,47448000.0
+Ceará,Mobilidade Urbana,Governo Estadual,Governo do Estado do Ceará,Em Andamento,43500000.0,23055000.0
+Rio Grande do Norte,Mobilidade Urbana,Governo Estadual,Governo do Estado do rio Grande do Norte,Em Andamento,73100000.0,24123000.0
+Rio Grande do Norte,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Natal,Em Andamento,370947996.91,244825677.96060002
+São Paulo,Aeroportos,Entidade Privada,Concessionária Aeroportos Brasil Viracopos s/a,Em Andamento,1180000000.0,1097400000.0
+Minas Gerais,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Não Iniciado,1845612.86,55368.385800000004
+Minas Gerais,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Não Iniciado,721630.77,122677.2309
+Ceará,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Fortaleza,Não Iniciado,22054872.44,5734266.834400001
+Minas Gerais,Desenvolvimento Turístico,Governo Estadual,Governo do Estado de Minas Gerais,Não Iniciado,1796227.52,0.0
+Minas Gerais,Desenvolvimento Turístico,Governo Estadual,Governo do Estado de Minas Gerais,Em Andamento,290508.56,0.0
+Amazonas,Desenvolvimento Turístico,Governo Estadual,Governo do Estado de Amazonas,Não Iniciado,2046153.85,40923.077000000005
+Rio Grande do Norte,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Natal,Não Iniciado,3904950.37,0.0
+Rio Grande do Norte,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Natal,Concluído,363151.84,257837.8064
+Distrito Federal,Desenvolvimento Turístico,Governo Distrital,Governo do Distrito Federal,Não Iniciado,4053439.85,202671.9925
+Rio Grande do Norte,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Natal,Em Andamento,14977329.23,6739798.1535
+Distrito Federal,Desenvolvimento Turístico,Governo Distrital,Governo do Distrito Federal,Não Iniciado,286461.54,286461.54
+Rio Grande do Sul,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Porto Alegre,Não Iniciado,278149.39,0.0
+Rio Grande do Sul,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Porto Alegre,Não Iniciado,7527835.01,0.0
+Mato Grosso,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Cuiabá,Não Iniciado,1668896.32,0.0
+Rio Grande do Sul,Desenvolvimento Turístico,Governo Estadual,Governo do Estado do rio Grande do sul,Não Iniciado,4975100.98,0.0
+Mato Grosso,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Cuiabá,Não Iniciado,1526483.84,0.0
+Pernambuco,Desenvolvimento Turístico,Governo Estadual,Governo do Estado de Pernambuco,Não Iniciado,3234817.82,0.0
+Rio de Janeiro,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal do rio de Janeiro,Não Iniciado,18424615.38,0.0
+Paraná,Desenvolvimento Turístico,Governo Estadual,Governo do Estado do Paraná,Não Iniciado,1509851.29,30197.0258
+Bahia,Desenvolvimento Turístico,Governo Estadual,Governo do Estado da Bahia,Não Iniciado,6699079.84,0.0
+São Paulo,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de são Paulo,Concluído,972410.26,700135.3872
+Paraná,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Curitiba,Não Iniciado,12839382.32,0.0
+Mato Grosso,Segurança Pública,Governo Federal,Sesge/min. Justiça,Não Iniciado,39000000.0,39000000.0
+Mato Grosso,Segurança Pública,Governo Federal,Sesge/min. Justiça,Não Iniciado,16200000.0,12150000.0
+Mato Grosso,Segurança Pública,Governo Federal,Sesge/min. Justiça,Em Andamento,322000000.0,289800000.0
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Aeronáutica,Concluído,247798191.38,247798191.38
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Aeronáutica,Concluído,1060000.0,1060000.0
+Mato Grosso,Segurança Pública,Governo Federal,Comando do Exército,Concluído,52342106.14,51818685.0786
+Mato Grosso,Segurança Pública,Governo Federal,Comando do Exército,Concluído,34403714.55,31307380.240499996
+Mato Grosso,Segurança Pública,Governo Federal,Comando do Exército,Concluído,9552245.28,9170155.468799999
+Mato Grosso,Segurança Pública,Governo Federal,Comando do Exército,Concluído,34940615.51,34591209.354899995
+Mato Grosso,Segurança Pública,Governo Federal,Comando do Exército,Concluído,10290117.97,9981414.4309
+Mato Grosso,Segurança Pública,Governo Federal,Comando do Exército,Concluído,41268696.29,40030635.4013
+Mato Grosso,Segurança Pública,Governo Federal,Comando do Exército,Concluído,59565050.42,57182448.4032
+Mato Grosso,Segurança Pública,Governo Federal,Comando do Exército,Concluído,3158801.62,3064037.5714
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Marinha,Concluído,16681075.5,16681075.5
+Mato Grosso,Segurança Pública,Governo Federal,Estado-maior Conjunto das Forças Armadas-md,Concluído,1712868.82,1712868.82
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Marinha,Concluído,1179794.63,1179794.63
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Marinha,Concluído,122542892.96,122542892.96
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Marinha,Concluído,27991377.13,25192239.417
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Marinha,Concluído,2077825.63,2077825.63
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Marinha,Concluído,23124338.13,22430607.986100003
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Marinha,Concluído,1736428.04,1736428.04
+Rio Grande do Sul,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Porto Alegre,Concluído,8000000.0,8000000.0
+Pernambuco,Mobilidade Urbana,Governo Estadual,Governo do Estado de Pernambuco,Concluído,25000000.0,25000000.0
+Rio de Janeiro,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal do rio de Janeiro,Concluído,109000000.0,109000000.0
+Rio de Janeiro,Mobilidade Urbana,Governo Estadual,Governo do Estado do rio de Janeiro,Em Andamento,178100000.0,163852000.0
+Bahia,Mobilidade Urbana,Governo Estadual,Governo do Estado da Bahia,Concluído,12400000.0,12400000.0
+Bahia,Mobilidade Urbana,Governo Estadual,Governo do Estado da Bahia,Em Andamento,7200000.0,2376000.0
+São Paulo,Mobilidade Urbana,Governo Estadual,Governo do Estado de são Paulo,Em Andamento,610507000.0,598296860.0
+São Paulo,Aeroportos,Entidade Privada,Concessionário,Em Andamento,1420000000.0,1391600000.0
+Pernambuco,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Recife,Concluído,7400000.0,7400000.0
+Minas Gerais,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Belo Horizonte,Não Iniciado,3671571.88,0.0
+Pernambuco,Desenvolvimento Turístico,Governo Estadual,Governo do Estado de Pernambuco,Não Iniciado,7547908.23,75479.08230000001
+Pernambuco,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Recife,Não Iniciado,4917948.72,49179.487199999996
+Paraná,Mobilidade Urbana,Governo Estadual,Governo do Estado do Paraná,Em Andamento,20390326.5,10399066.515
+Paraná,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Curitiba,Em Andamento,39430000.0,39035700.0
+Paraná,Mobilidade Urbana,Governo Estadual,Governo do Estado do Paraná,Em Andamento,65200000.0,38468000.0
+Mato Grosso,Outros,Governo Federal,Ministério do Esporte,Em Andamento,28136514.2,28136514.2
+Mato Grosso,Outros,Governo Federal,Ministério do Esporte,Concluído,13257140.67,13257140.67
+Mato Grosso,Outros,Governo Federal,Ministério do Esporte,Concluído,49600.0,49600.0
+Mato Grosso,Segurança Pública,Governo Federal,Sesge/min. Justiça,Em Andamento,20500000.0,15170000.0
+Mato Grosso,Segurança Pública,Governo Federal,Sesge/min. Justiça,Em Andamento,680500000.0,680500000.0
+Mato Grosso,Telecomunicações,Governo Federal,Ministério das Comunicações,Concluído,33382652.87,33382652.87
+Ceará,Desenvolvimento Turístico,Banco Federal,Bnb,Em Andamento,0.0,0.0
+Pernambuco,Desenvolvimento Turístico,Banco Federal,Bnb,Em Andamento,0.0,0.0
+Rio Grande do Norte,Desenvolvimento Turístico,Banco Federal,Bnb,Em Andamento,0.0,0.0
+Pernambuco,Desenvolvimento Turístico,Banco Federal,Bnb,Não Iniciado,0.0,0.0
+Minas Gerais,Instalações Complementares (copa das Confederações),Governo Estadual,Governo do Estado de Minas Gerais,Concluído,38300000.0,38300000.0
+Distrito Federal,Instalações Complementares (copa das Confederações),Governo Distrital,Governo do Distrito Federal,Concluído,27000000.0,27000000.0
+Ceará,Instalações Complementares (copa das Confederações),Governo Estadual,Governo do Estado do Ceará,Concluído,27400000.0,27400000.0
+Pernambuco,Instalações Complementares (copa das Confederações),Governo Estadual,Governo do Estado de Pernambuco,Concluído,35700000.0,35700000.0
+Rio de Janeiro,Instalações Complementares (copa das Confederações),Governo Estadual,Governo do Estado do rio de Janeiro,Concluído,37700000.0,37700000.0
+Bahia,Instalações Complementares (copa das Confederações),Governo Estadual,Governo do Estado da Bahia,Concluído,34000000.0,34000000.0
+Rio Grande do Sul,Mobilidade Urbana,Governo Municipal,Prefeitura Municipal de Porto Alegre,Em Andamento,8700000.0,7395000.0
+Pernambuco,Desenvolvimento Turístico,Banco Federal,Bnb,Não Iniciado,0.0,0.0
+Amazonas,Desenvolvimento Turístico,Governo Estadual,Governo do Estado de Amazonas,Não Iniciado,5920864.23,59208.64230000001
+Bahia,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Salvador,Não Iniciado,8800920.16,0.0
+Bahia,Desenvolvimento Turístico,Banco Federal,Bnb,Não Iniciado,0.0,0.0
+Pernambuco,Desenvolvimento Turístico,Banco Federal,Bnb,Não Iniciado,0.0,0.0
+Pernambuco,Desenvolvimento Turístico,Banco Federal,Bnb,Não Iniciado,0.0,0.0
+Pernambuco,Desenvolvimento Turístico,Banco Federal,Bnb,Não Iniciado,0.0,0.0
+Mato Grosso,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Cuiabá,Não Iniciado,853846.15,0.0
+Paraná,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de Curitiba,Não Iniciado,3787282.05,0.0
+São Paulo,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de são Paulo,Não Iniciado,21695652.17,0.0
+São Paulo,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal de são Paulo,Em Andamento,2500000.0,0.0
+Mato Grosso,Outros,Governo Federal,Ministério do Esporte,Em Andamento,9554852.28,6019556.9364
+,Comunicação,Governo Federal,Embratur - Instituto Brasileiro de Turismo,Concluído,6600000.0,6600000.0
+Rio Grande do Sul,Aeroportos,Governo Federal,Infraero,Em Andamento,23780000.0,19499600.0
+Mato Grosso,Segurança Pública,Governo Federal,Sesge/min. Justiça,Em Andamento,25000000.0,25000000.0
+Rio de Janeiro,Desenvolvimento Turístico,Entidade Privada,Arena Leme Hotel Ltda,Em Andamento,0.0,0.0
+Rio de Janeiro,Desenvolvimento Turístico,Governo Municipal,Prefeitura Municipal do rio de Janeiro,Não Iniciado,515384.62,0.0
+Mato Grosso,Outros,Governo Federal,Ministério do Esporte,Concluído,490389.8,490389.8
+Minas Gerais,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado de Minas Gerais,Concluído,37000000.0,37000000.0
+Distrito Federal,Instalações Complementares (copa 2014),Governo Distrital,Governo do Distrito Federal,Concluído,28400000.0,28400000.0
+Ceará,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado do Ceará,Concluído,27100000.0,27100000.0
+Pernambuco,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado de Pernambuco,Concluído,33900000.0,33900000.0
+Rio de Janeiro,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado do rio de Janeiro,Concluído,66000000.0,66000000.0
+Bahia,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado da Bahia,Concluído,37000000.0,37000000.0
+Mato Grosso,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado de Mato Grosso,Concluído,35500000.0,35500000.0
+Paraná,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado do Paraná,Concluído,26000000.0,26000000.0
+Amazonas,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado de Amazonas,Concluído,123600000.0,123600000.0
+Rio Grande do Norte,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado do rio Grande do Norte,Concluído,30700000.0,30700000.0
+Rio Grande do Sul,Instalações Complementares (copa 2014),Governo Estadual,Governo do Estado do rio Grande do sul,Concluído,25000000.0,25000000.0
+São Paulo,Instalações Complementares (copa 2014),Entidade Privada,Arena Fundo de Investimento Imobiliario - fii,Concluído,107900000.0,107900000.0
+Mato Grosso,Telecomunicações,Governo Federal,Ministério das Comunicações,Concluído,145710450.0,145710450.0
+Mato Grosso,Segurança Pública,Governo Federal,Comando da Aeronáutica,Concluído,3125504.58,3125504.58

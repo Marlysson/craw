@@ -18,7 +18,7 @@ def load_formatted(file_name):
 	file_name = full_path(file_name)
 
 	with open(file_name,newline='') as csv_file:
-		file_content = csv.DictReader(csv_file,delimiter=";")
+		file_content = csv.DictReader(csv_file,delimiter=",")
 		return [dict(line) for line in file_content]
 
 def generate_colors(count=None,alpha=None):

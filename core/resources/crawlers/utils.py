@@ -29,7 +29,7 @@ def save_csv(file=None,data=None):
 
     with open(file_path,"w",newline="") as csv_file:
 
-        csv_writer = csv.DictWriter(csv_file, fieldnames=data_columns,delimiter=";")
+        csv_writer = csv.DictWriter(csv_file, fieldnames=data_columns,delimiter=",")
         csv_writer.writeheader()
         csv_writer.writerows(data)
 
