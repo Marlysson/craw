@@ -1,12 +1,12 @@
 from selenium import webdriver
-from os.path import join, dirname, abspath
+from os import path , getcwd
 import csv
+
+CRAWLER_DIR = path.dirname(getcwd())
 
 def browser():
 
-	relative_path = dirname(dirname(abspath(__file__)))
-
-	address = join(relative_path,"phantomjs.exe")
+	address = path.join(CRAWLER_DIR,"phantomjs.exe")
 	return webdriver.PhantomJS(address)
 
 
@@ -16,11 +16,13 @@ def save_csv(file=None,data=None):
 	if not data:
 		raise ValueError("The 'data' attribute should be filled")
 
-	columns = list(data[0].keys())
+	file_path = path.join(CRAWLER_DIR,"data",file)
 
-	with open(file,"w",newline="") as csv_file:
+	data_columns = list(data[0].keys())
 
-		csv_writer = csv.DictWriter(csv_file, fieldnames=columns,delimiter=";")
+	with open(file_path,"w",newline="") as csv_file:
+
+		csv_writer = csv.DictWriter(csv_file, fieldnames=data_columns,delimiter=";")
 		csv_writer.writeheader()
 		csv_writer.writerows(data)
 
