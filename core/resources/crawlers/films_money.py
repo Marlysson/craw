@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
-from utils import save_csv, save_file_as
+from utils import save_csv, save_file_as , URL_RESOURCES
 from collections import OrderedDict
 
-URL = "http://www.imdb.com/chart/boxoffice"
+URL = URL_RESOURCES.get("films_money")
 content = requests.get(URL).content
 
 parser = BeautifulSoup(content,"html.parser")

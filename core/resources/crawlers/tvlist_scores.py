@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
-from utils import browser, save_csv
+from utils import browser, save_csv, URL_RESOURCES
 from collections import OrderedDict
 
-URL = "https://www.rottentomatoes.com/browse/tv-list-1"
+URL = URL_RESOURCES.get("tv_list_scores")
 
 browser = browser()
 browser.get(URL)

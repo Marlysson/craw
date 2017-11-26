@@ -3,7 +3,7 @@ import requests
 from time import sleep
 import re
 from collections import OrderedDict
-from utils import save_csv
+from utils import save_csv , URL_RESOURCES
 
 # Separar chamadas de cada página usando asyncio
 
@@ -43,7 +43,7 @@ def parsed_data_country(link_country):
 	return data
 
 
-URL_BASE = "http://example.webscraping.com"
+URL_BASE = URL_RESOURCES.get("countries_infos")
 data = []
 
 parser = get_parsed_content(URL_BASE)

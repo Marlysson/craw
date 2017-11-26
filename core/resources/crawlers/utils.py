@@ -8,7 +8,10 @@ CRAWLER_DIR = path.dirname(getcwd())
 DATA_DIR = path.join(CRAWLER_DIR,"data")
 
 URL_RESOURCES = {
-    "world_cup": "http://www.portaltransparencia.gov.br/copa2014/api/rest/empreendimento"
+    "world_cup": "http://www.portaltransparencia.gov.br/copa2014/api/rest/empreendimento",
+    "countries_infos": "http://example.webscraping.com",
+    "films_money": "http://www.imdb.com/chart/boxoffice",
+    "tv_list_scores": "https://www.rottentomatoes.com/browse/tv-list-1"
 }
 
 def save_file_as(scope):
