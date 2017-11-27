@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<div class="bigger-chart">
+	<canvas id="bar_chart"></canvas>	
+</div>
+
+<div class="bigger-chart">
+	<canvas id="bar_chart_positions"></canvas>	
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+<script type="text/javascript">
+
+	var ctx = document.getElementById("bar_chart");
+	var chart_bar_review = new Chart(ctx, {
+	    type: 'horizontalBar',
+	    data: {
+	        labels:{{ labels|safe }},
+	        datasets: [{
+	            label: 'Valores semanais',
+	            data: {{ values_weekend|safe }},
+	            backgroundColor: {{ background_one|safe }},
+	            borderColor: {{ border_one|safe}},
+	            borderWidth: 2.5
+	        },
+	        {
+	        	label: 'Valores acumulados',
+	            data: {{ values_total|safe }},
+	            backgroundColor: {{ background_two|safe }},
+	            borderColor: {{ border_two|safe}},
+	            borderWidth: 2.5	
+	        }]
+	    },
+	    options: {
+            title : {
+            		display:true,
+                    text:"Valores arrecadados por filmes",
+                    fontSize:25,
+                    padding:20
+            },
+            legend : {
+            	display: true,
+            	position:"right"
+            },
+
+            tooltips: {
+                callbacks : {
+
+                    title : function(tooltipItem,chart){
+                        return "Valores arrecadado";
+                    },
+
+                    label : function(tooltip,data){
+
+                    	number = new Number(tooltip.xLabel);
+                        number = number.toLocaleString(undefined, {maximumFractionDigits:2})
+
+                        label_info = ""
+
+                    	if (tooltip.datasetIndex == 0){
+                    		label_info = "Semanal: ";
+                        }else{
+                        	label_info = "Acumulado: ";
+                        }
+
+                        return label_info + "$" +number;
+                    }
+                    
+                }
+            },
+
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return value.toLocaleString();
+                        }   
+                    },
+                    scaleLabel : {
+            			display : true,
+            			labelString : "MILHÕES DE REAIS"
+            		}
+                }]
+            }
+        }
+	});
+
+</script>
+
+<script type="text/javascript">
+	var ctx = document.getElementById("bar_chart_positions");
+	var chart_bar_review = new Chart(ctx, {
+	    type: 'horizontalBar',
+	    data: {
+	        labels:{{ labels|safe }},
+	        datasets: [{
+	            label: 'Valores semanais',
+	            data: {{ weeks_ranking|safe }},
+	            backgroundColor: {{ background_three|safe }},
+	        }]
+	    },
+	    options: {
+            title : {
+            		display:true,
+                    text:"Quantidade de semanas no Ranking",
+                    fontSize:25,
+                    padding:20
+            },
+            scales: {
+            	xAxes : [{
+            		ticks: {
+            			beginAtZero: true,
+            			stepSize:1
+            		},
+            		scaleLabel : {
+            			display : true,
+            			labelString : "SEMANAS"
+            		}
+            	}]
+            },
+            legend : {
+            	display:false
+            },
+            tooltips : {
+            	callbacks : {
+            		label : function(tooltip, data) {
+            			return "Semanas : " + tooltip.xLabel;
+            		}
+            	}
+            }
+            
+		}
+	});
+</script>
+{% endblock %}

@@ -23,6 +23,7 @@ def parsed_data_country(link_country):
 	parser = get_parsed_content(URL_BASE + link_country)
 
 	name = parser.find(id="places_country__row").find(class_="w2p_fw").get_text()
+	iso_code = parser.find(id="places_iso__row").find(class_="w2p_fw").get_text()
 	population = parser.find(id="places_population__row").find(class_="w2p_fw").get_text()
 	area = parser.find(id="places_area__row").find(class_="w2p_fw").get_text()
 
@@ -36,6 +37,7 @@ def parsed_data_country(link_country):
 
 	data = OrderedDict()
 	data["nome"] = name
+	data["iso_code"] = iso_code
 	data["populacao"] = population
 	data["area"] = area
 	data["densidade"] = density

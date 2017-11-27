@@ -37,6 +37,36 @@ def tv_series_review(request):
 
 	return render(request,"review_series.html",context)
 
+def films_money(request):
+
+	content = load_formatted("films_money.csv")
+	
+	labels, values_weekend, values_total,weeks_ranking = [], [], [], []
+
+	for item in content:
+		labels.append(item["nome"])
+		values_weekend.append(float(item["valor_semanal"]))
+		values_total.append(float(item["valor_acumulado"]))
+		weeks_ranking.append(int(item["quantidade_semanas"]))
+
+	background_color_one , color_border_one = generate_colors(len(labels),alpha=0.5)
+	background_color_two , color_border_two = generate_colors(len(labels),alpha=0.5)
+	background_three , _ = generate_colors(len(labels))
+
+	context = {
+		"labels":labels,
+		"values_weekend":values_weekend,
+		"values_total":values_total,
+		"weeks_ranking":weeks_ranking,
+		"background_one": background_color_one,
+		"border_one":color_border_one,
+		"background_two":background_color_two,
+		"border_two":color_border_two,
+		"background_three":background_three
+	}
+
+	return render(request,"films-money.html",context)
+
 def view_world_cup_expenses(request):
 
 	content = load_formatted("world_cup_expenses.csv")
