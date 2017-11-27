@@ -51,7 +51,7 @@ def films_money(request):
 
 	background_color_one , color_border_one = generate_colors(len(labels),alpha=0.5)
 	background_color_two , color_border_two = generate_colors(len(labels),alpha=0.5)
-	background_three , _ = generate_colors(len(labels))
+	background_three = generate_colors(len(labels),different=True)
 
 	context = {
 		"labels":labels,

@@ -95,14 +95,13 @@
 <script type="text/javascript">
 	var ctx = document.getElementById("bar_chart_positions");
 	var chart_bar_review = new Chart(ctx, {
-	    type: 'horizontalBar',
+	    type: 'doughnut',
 	    data: {
+            datasets: [{
+                data: {{ weeks_ranking|safe }},
+                backgroundColor: {{ background_three|safe }},
+            }],
 	        labels:{{ labels|safe }},
-	        datasets: [{
-	            label: 'Valores semanais',
-	            data: {{ weeks_ranking|safe }},
-	            backgroundColor: {{ background_three|safe }},
-	        }]
 	    },
 	    options: {
             title : {
@@ -111,25 +110,17 @@
                     fontSize:25,
                     padding:20
             },
-            scales: {
-            	xAxes : [{
-            		ticks: {
-            			beginAtZero: true,
-            			stepSize:1
-            		},
-            		scaleLabel : {
-            			display : true,
-            			labelString : "SEMANAS"
-            		}
-            	}]
-            },
             legend : {
-            	display:false
+            	display:true,
+                position:"top"
             },
             tooltips : {
             	callbacks : {
             		label : function(tooltip, data) {
-            			return "Semanas : " + tooltip.xLabel;
+                        index = tooltip.index
+                        weeks = data.datasets[0].data[index];
+
+            			return "Semanas : " + weeks;
             		}
             	}
             }

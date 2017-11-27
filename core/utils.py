@@ -21,18 +21,31 @@ def load_formatted(file_name):
 		file_content = csv.DictReader(csv_file,delimiter=",")
 		return [dict(line) for line in file_content]
 
-def generate_colors(count=None,alpha=1):
+def generate_colors(count=None,alpha=1,different=False):
 
-	background_color = sample(range(0,256),3)
-	border_color = background_color + [1]
+	if different:
+		colors = []
 
-	background_color = ",".join(list(map(str, background_color + [alpha] )))
-	background_color = "rgba({})".format(background_color)
+		for _ in range(count):
+			background = sample(range(0,256),3)
+			
+			background = ",".join(list(map(str, background + [alpha] )))
+			background = "rgba({})".format(background)			
+			colors.append(background)
 
-	border_color = ",".join(list(map(str,border_color)))
-	border_color = "rgba({})".format(border_color)
+		return colors
 
-	background_color = [background_color] * count
-	border_color = [border_color] * count
+	else:
+		background_color = sample(range(0,256),3)
+		border_color = background_color + [1]
 
-	return background_color , border_color
+		background_color = ",".join(list(map(str, background_color + [alpha] )))
+		background_color = "rgba({})".format(background_color)
+
+		border_color = ",".join(list(map(str,border_color)))
+		border_color = "rgba({})".format(border_color)
+
+		background_color = [background_color] * count
+		border_color = [border_color] * count
+
+		return background_color , border_color
