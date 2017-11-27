@@ -2,12 +2,21 @@
 
 {% block content%}
 
+<h1 style="text-align:center;font-size:15px;font-family:'Arial';">{{ total_spent_negotiated }}</h1>
+<h1 style="text-align:center;font-size:15px;font-family:'Gothic';">{{ total_spent_executed }}</h1>
+
 <div class="bigger-chart">
     <canvas id="bar-chart"></canvas>  
 </div>
 
-<div class="bigger-chart">
+<div class="row-container">
+    <div class="half-chart left">
         <canvas id="pie-chart"></canvas>
+    </div>
+
+    <div class="half-chart right">
+        <canvas id="pie-chart-types-spents"></canvas>
+    </div>
 </div>
 
 <div class="row-container">
@@ -85,7 +94,8 @@
                     ticks: {
                         callback: function(value, index, values) {
                             return value.toLocaleString();
-                        }   
+                        },
+                        beginAtZero : true
                     }
                 }]
             }
@@ -111,6 +121,54 @@
                 position:"top",
                 display:true,
                 text:"Gastos por tipo de obras",
+                fontSize:25,
+                padding:40
+            },
+            legend : {
+                display:false,
+                position:"left"
+            },
+            tooltips: {
+                callbacks : {
+
+                    label : function(tooltip,data){
+                        console.log(tooltip)
+                        index = tooltip.index
+                        value = data.datasets[0].data[index];
+
+                        label = data.labels[index];
+
+                        number = new Number(value);
+                        number = number.toLocaleString(undefined, {maximumFractionDigits:2})
+
+                        return label +": R$ " +number;
+                    }
+                    
+                }
+            },
+
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+    
+    var ctx = document.getElementById("pie-chart-types-spents");
+    var pie_chart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            datasets : [{ 
+                data: {{ types_spents|safe }},
+                backgroundColor: {{ colors_total_spents_type|safe }}
+            }],
+            labels : [ "Valor Negociado", "Valor Executado"] ,
+        },
+        options : {
+            title : {
+                position:"top",
+                display:true,
+                text:"Gastos gerais - informações",
                 fontSize:25,
                 padding:40
             },
@@ -222,7 +280,7 @@
             title : {
                 position:"top",
                 display:true,
-                text:"Quantidade de Obras por tipo de Instituição",
+                text:"Quantidade de Obras",
                 fontSize:25,
                 padding:40
             },
@@ -265,7 +323,7 @@
             title : {
                 position:"top",
                 display:true,
-                text:"Gasto por tipo de Obra de Instituições",
+                text:"Gasto nas Obras",
                 fontSize:25,
                 padding:40
             },
@@ -281,7 +339,7 @@
                         index = tooltip[0].index;
                         return chart.labels[index];
                     },
-                    
+
                     label : function(tooltip,chart){
                         index = tooltip.index
                         value = chart.datasets[0].data[index];

@@ -49,3 +49,6 @@ def generate_colors(count=None,alpha=0.5,different=False):
 		border_color = [border_color] * count
 
 		return background_color , border_color
+
+def sort_it(dictionary):
+	return sorted(dictionary.items(),key=lambda x : x[1], reverse=True)

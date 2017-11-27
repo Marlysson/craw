@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .utils import load_formatted, generate_colors
+from .utils import load_formatted, generate_colors , sort_it
 from random import sample
 from collections import defaultdict
 
@@ -12,19 +12,23 @@ def tv_series_review(request):
 	values = []
 	pie_colors = []
 
+	data_tv_series = {}
+
 	for item in content:
 		if item["classificacao"] != "Sem avaliação":
-			labels.append(item["nome"])
-			values.append(item["classificacao"])
+			data_tv_series[item["nome"]] = float(item["classificacao"].replace("%",""))
 		else:
 			series_without_review.append(item["nome"])
 
-	background_color, border_color = generate_colors(len(labels),alpha=0.5)
+	data_tv_series = sort_it(data_tv_series)
 
-	for _ in range(2):
-		pie_background = sample(range(0,256),3)
-		pie_background = "rgb({})".format(",".join(list(map(str, pie_background))))
-		pie_colors.append(pie_background)
+	for item,value in data_tv_series:
+		labels.append(item)
+		values.append(value)
+
+	background_color, border_color = generate_colors(len(data_tv_series))
+
+	pie_colors = generate_colors(len(labels),different=True)
 
 	context = {
 		"labels":labels,
@@ -76,19 +80,20 @@ def view_world_cup_expenses(request):
 
 	# Gasto por Estado
 
+	spent_countries = defaultdict(float)
+
 	for spent in content:
-		if spent["uf"] in spent_countries:
-			spent_countries[spent["uf"]] += float(spent["negociado"])
-		else:
-			spent_countries[spent["uf"]] = 0.0
-		
+		spent_countries[spent["uf"]] += float(spent["negociado"])
+	
+	spent_countries = sort_it(spent_countries)
+
 	background , border = generate_colors(len(list(spent_countries)))
 	
 	labels, values = [] , []	
 
-	for item in spent_countries:
+	for item,value in spent_countries:
 		labels.append(item)
-		values.append(spent_countries[item])
+		values.append(value)
 
 	# Gasto por tipo de construção ( Aeroporto , Mobilidade Urbana )
 
@@ -106,15 +111,15 @@ def view_world_cup_expenses(request):
 	for spent in content:
 		institution[spent["instituicao"]] += float(spent["negociado"])
 
-	ordered_instituition_spent = sorted(institution.items(),key=lambda x : x[1], reverse=True)
+	institution = sort_it(institution)
 
 	institution_labels , institution_values = [] , []
 
-	for institution,value in ordered_instituition_spent:
+	for institution,value in institution:
 		institution_labels.append(institution)
 		institution_values.append(value)
 
-	background_institution , border_institution = generate_colors(len(ordered_instituition_spent))
+	background_institution , border_institution = generate_colors(len(institution_labels))
 
 	# Gasto por tipo de instituição ( Federal , Estadual , Privada )
 	# Valores e Quantidade de Obras
@@ -126,9 +131,12 @@ def view_world_cup_expenses(request):
 		types_construction_count[spent["tipo_instituicao"]] += 1
 		types_construction_spents[spent["tipo_instituicao"]] += float(spent["negociado"])
 
-
 	colors_pie_types_construction_count = generate_colors(len(types_construction_count),different=True)
 	colors_pie_types_construction_spents = generate_colors(len(types_construction_spents),different=True)
+
+	types_spents = [sum([float(item["negociado"]) for item in content]), sum([float(item["executado"]) for item in content])]
+
+	colors_type_spent = generate_colors(len(types_spents),different=True)
 
 
 	context = {
@@ -137,8 +145,9 @@ def view_world_cup_expenses(request):
 		"background": background,
 		"border": border,
 
-		"total_spent": "{:,.2f}".format(sum(values)),
-	
+		"types_spents": types_spents,
+		"colors_total_spents_type": colors_type_spent,
+
 		"labels_type_construction": list(types_construction.keys()),
 		"values_type_construction": list(types_construction.values()),
 		"color_pie" : colors_pie,
