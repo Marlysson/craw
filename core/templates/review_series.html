@@ -17,10 +17,10 @@
 			<caption>Séries sem avaliações</caption>
 			  <thead>
 			    <tr>
-			      <th scope="col">Nome da série</th>
+			      <th scope="col" class="text-center">Nome da série</th>
 			    </tr>
 			  </thead>
-			  <tbody>
+			  <tbody class="text-center">
 			  	{% for serie in series_without_review %}
 			    	<tr><td>{{ serie }}</td></tr>
 			    {% endfor %}
@@ -98,7 +98,7 @@
 				display:true,
 				text:"Quantitativo de avaliações",
 				fontSize:25,
-				padding:20
+				// padding:20
 			}
 		}
 	});
