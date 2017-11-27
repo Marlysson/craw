@@ -10,6 +10,9 @@
         <canvas id="pie-chart"></canvas>
 </div>
 
+<div class="bigger-chart">
+    <canvas id="institution-bar-chart" height="500"></canvas>  
+</div>
 
 {% endblock %}
 
@@ -45,8 +48,8 @@
 
                     title : function(tooltipItem,chart){
                         
-                        value = tooltipItem[0].yLabel;
-
+                        value = tooltipItem[0].xLabel;
+                        
                         if ( value < 999999.99){
                             return "Gasto em Milhares";
                         }else if ( value < 999999999.99){
@@ -116,7 +119,7 @@
                         number = new Number(value);
                         number = number.toLocaleString(undefined, {maximumFractionDigits:2})
 
-                        return label +": R$" +number;
+                        return label +": R$ " +number;
                     }
                     
                 }
@@ -126,5 +129,69 @@
     });
 
 </script>
+
+<script type="text/javascript">
+
+    var ctx = document.getElementById("institution-bar-chart");
+    var myChart = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: {
+            labels: {{ institution_label|safe }},
+            datasets: [{
+                label: 'Valores gastos por Instituição',
+                data: {{ institution_values|safe }},
+                backgroundColor: {{ background_institution|safe }},
+                borderColor : {{ border_institution|safe }},
+                borderWidth : 1.5,
+            }]
+
+        },
+        options: {
+            title : {
+                    position:"top",
+                    display:true,
+                    text:"Gasto por Instituição na copa do mundo de 2014",
+                    fontSize:25,
+                    padding:20
+            },
+
+            tooltips: {
+                callbacks : {
+
+                    title : function(tooltipItem,chart){
+                        
+                        value = parseFloat(tooltipItem[0].xLabel);
+
+                        if ( value < 999999.99){
+                            return "Gasto em Milhares";
+                        }else if ( value < 999999999.99){
+                            return "Gasto em Milhões";  
+                        }else{
+                            return "Gasto em Bilhões";
+                        }
+                                                
+                    },
+
+                    label : function(tooltipItem,chart){
+                        number = new Number(tooltipItem.xLabel);
+                        return "R$ " + number.toLocaleString(undefined, {maximumFractionDigits:2})
+                    }
+                    
+                }
+            },
+
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return value.toLocaleString();
+                        }   
+                    }
+                }]
+            }
+        }
+    });
+
 </script>
+
 {% endblock %}

@@ -74,6 +74,8 @@ def view_world_cup_expenses(request):
 
 	spent_countries = {}
 
+	# Gasto por Estado
+
 	for spent in content:
 		if spent["uf"] in spent_countries:
 			spent_countries[spent["uf"]] += float(spent["negociado"])
@@ -97,14 +99,41 @@ def view_world_cup_expenses(request):
 
 	colors_pie = generate_colors(len(types_construction),different=True)
 
+	# Gasto por Instituição efetivamente construtora
+
+	institution = defaultdict(float)
+
+	for spent in content:
+		institution[spent["instituicao"]] += float(spent["negociado"])
+
+	ordered_instituition_spent = sorted(institution.items(),key=lambda x : x[1], reverse=True)
+
+	institution_labels , institution_values = [] , []
+
+	for institution,value in ordered_instituition_spent:
+		institution_labels.append(institution)
+		institution_values.append(value)
+
+	background_institution , border_institution = generate_colors(len(ordered_instituition_spent))
+
 	context = {
 		"label_countries" : labels,
 		"values_negotiated" : values,
-		"labels_type_construction": list(types_construction.keys()),
-		"values_type_construction": list(types_construction.values()),
 		"background": background,
 		"border": border,
-		"color_pie" : colors_pie
+
+		"total_spent": "{:,.2f}".format(sum(values)),
+	
+		"labels_type_construction": list(types_construction.keys()),
+		"values_type_construction": list(types_construction.values()),
+		
+		"color_pie" : colors_pie,
+
+		"institution_label" : institution_labels,
+		"institution_values": institution_values,
+		
+		"background_institution" : background_institution,
+		"border_institution": border_institution
 	}
 
 	return render(request,"world-cup.html",context)
