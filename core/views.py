@@ -90,7 +90,7 @@ def view_world_cup_expenses(request):
 		labels.append(item)
 		values.append(spent_countries[item])
 
-	# Gasto por tipo de infraestrutura
+	# Gasto por tipo de construção ( Aeroporto , Mobilidade Urbana )
 
 	types_construction = defaultdict(float)
 
@@ -99,7 +99,7 @@ def view_world_cup_expenses(request):
 
 	colors_pie = generate_colors(len(types_construction),different=True)
 
-	# Gasto por Instituição efetivamente construtora
+	# Gasto por Instituição Construtora
 
 	institution = defaultdict(float)
 
@@ -116,6 +116,21 @@ def view_world_cup_expenses(request):
 
 	background_institution , border_institution = generate_colors(len(ordered_instituition_spent))
 
+	# Gasto por tipo de instituição ( Federal , Estadual , Privada )
+	# Valores e Quantidade de Obras
+
+	types_construction_count = defaultdict(int)
+	types_construction_spents = defaultdict(float)
+
+	for spent in content:
+		types_construction_count[spent["tipo_instituicao"]] += 1
+		types_construction_spents[spent["tipo_instituicao"]] += float(spent["negociado"])
+
+
+	colors_pie_types_construction_count = generate_colors(len(types_construction_count),different=True)
+	colors_pie_types_construction_spents = generate_colors(len(types_construction_spents),different=True)
+
+
 	context = {
 		"label_countries" : labels,
 		"values_negotiated" : values,
@@ -126,14 +141,20 @@ def view_world_cup_expenses(request):
 	
 		"labels_type_construction": list(types_construction.keys()),
 		"values_type_construction": list(types_construction.values()),
-		
 		"color_pie" : colors_pie,
 
 		"institution_label" : institution_labels,
 		"institution_values": institution_values,
-		
 		"background_institution" : background_institution,
-		"border_institution": border_institution
+		"border_institution": border_institution,
+
+		"label_type_institution_count" : list(types_construction_count.keys()),
+		"values_type_institution_count" : list(types_construction_count.values()),
+		"color_pie_construction_count" : colors_pie_types_construction_count,
+
+		"label_type_institution_values" : list(types_construction_spents.keys()),
+		"values_type_institution_values" : list(types_construction_spents.values()),
+		"color_pie_construction_values" : colors_pie_types_construction_spents
 	}
 
 	return render(request,"world-cup.html",context)

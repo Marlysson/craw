@@ -6,8 +6,20 @@
     <canvas id="bar-chart"></canvas>  
 </div>
 
-<div class="bigger-chart left">
+<div class="bigger-chart">
         <canvas id="pie-chart"></canvas>
+</div>
+
+<div class="row-container">
+    
+    <div class="half-chart left">
+        <canvas id="obras-por-instituicao-count"></canvas>
+    </div>
+
+    <div class="half-chart">
+        <canvas id="obras-por-instituicao-valores"></canvas>
+    </div>
+
 </div>
 
 <div class="bigger-chart">
@@ -49,7 +61,7 @@
                     title : function(tooltipItem,chart){
                         
                         value = tooltipItem[0].xLabel;
-                        
+
                         if ( value < 999999.99){
                             return "Gasto em Milhares";
                         }else if ( value < 999999999.99){
@@ -194,4 +206,93 @@
 
 </script>
 
+<script type="text/javascript">
+    
+    var ctx = document.getElementById("obras-por-instituicao-count");
+    var pie_chart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            datasets : [{ 
+                data: {{ values_type_institution_count|safe }},
+                backgroundColor: {{ color_pie_construction_count|safe }}
+            }],
+            labels : {{ label_type_institution_count|safe }} ,
+        },
+        options : {
+            title : {
+                position:"top",
+                display:true,
+                text:"Quantidade de Obras por tipo de Instituição",
+                fontSize:25,
+                padding:40
+            },
+            legend : {
+                display:true,
+                position:"right"
+            },
+            tooltips: {
+                callbacks : {
+                    title : function(tooltip,chart){
+                        index = tooltip[0].index;
+                        return chart.labels[index];
+                    },
+
+                    label : function(tooltip,chart){
+                        index = tooltip.index;
+                        return "Quantidade: " + chart.datasets[0].data[index];
+                    }
+                }
+            },
+
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+    
+    var ctx = document.getElementById("obras-por-instituicao-valores");
+    var pie_chart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            datasets : [{ 
+                data: {{ values_type_institution_values|safe }},
+                backgroundColor: {{ color_pie_construction_values|safe }}
+            }],
+            labels : {{ label_type_institution_values|safe }} ,
+        },
+        options : {
+            title : {
+                position:"top",
+                display:true,
+                text:"Gasto por tipo de Obra de Instituições",
+                fontSize:25,
+                padding:40
+            },
+            legend : {
+                display:true,
+                position:"right"
+            },
+            tooltips: {
+
+                callbacks : {
+                    
+                    title : function(tooltip,chart){
+                        index = tooltip[0].index;
+                        return chart.labels[index];
+                    },
+                    
+                    label : function(tooltip,chart){
+                        index = tooltip.index
+                        value = chart.datasets[0].data[index];
+                        return "R$ " + value.toLocaleString(undefined, {maximumFractionDigits:2})
+                    }
+                    
+                }
+            },
+
+        }
+    });
+
+</script>
 {% endblock %}
