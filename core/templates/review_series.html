@@ -2,12 +2,33 @@
 
 {% block content%}
 
-
-<div style="width:80vw;height:600px;margin:20px auto;">
-	<canvas id="myChart"></canvas>	
+<div class="bigger-chart">
+	<canvas id="bar_chart"></canvas>	
 </div>
 
-<canvas id="pie"></canvas>	
+<div class="row-container">
+	
+	<div class="half-chart left">
+		<canvas id="pie_chart"></canvas>
+	</div>
+
+	<div class="half-chart right">
+		<table class="table table-striped" style="width:90%">
+			<caption>Séries sem avaliações</caption>
+			  <thead>
+			    <tr>
+			      <th scope="col">Nome da série</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	{% for serie in series_without_review %}
+			    	<tr><td>{{ serie }}</td></tr>
+			    {% endfor %}
+			   </tbody>
+		</table>
+	</div>
+
+</div>
 
 {% endblock %}
 
@@ -15,15 +36,17 @@
 
 <script type="text/javascript">
 
-	var ctx = document.getElementById("myChart");
-	var myChart = new Chart(ctx, {
-	    type: 'bar',
+	var ctx = document.getElementById("bar_chart");
+	var chart_bar_review = new Chart(ctx, {
+	    type: 'horizontalBar',
 	    data: {
 	        labels:{{ labels|safe }},
 	        datasets: [{
-	            label: 'Porcentagem',
-	            data: {{ values }},
-	            backgroundColor: {{ colors|safe }}
+	            label: 'Classificação( % )',
+	            data: {{ values|safe }},
+	            backgroundColor: {{ background|safe }},
+	            borderColor: {{ border|safe}},
+	            borderWidth: 2.5
 	        }]
 	    },
 	    options: {
@@ -34,22 +57,51 @@
 	    			fontSize:25,
 	    			padding:20
 	    	},	
-	        legend: {
-	        	position:"right",
-	            display: true
-        	}
+	        legend: { padding:10 },
+	        scales: {
+	            xAxes: [{
+	                ticks: {
+	                    // Include a dollar sign in the ticks
+	                    callback: function(value, index, values) {
+	                        return value + "%";
+	                    }
+	                }
+	            }]
+	        },
+	        tooltips : {
+	        	callbacks : {
+	        		label : function(tooltipItem, chart){
+	        			return "Classificação: " + tooltipItem.xLabel + "%";
+	        		}
+	        	}
+	        }
 	    }
 	});
 
 </script>
 
 <script type="text/javascript">
-var ctx = document.getElementById("pie");
-myPieChart = new Chart(ctx,{
-    type: 'doughnut',
-    data : {{ pie_chart|safe}},
-    labels: {{ pie_labels|safe}}
-});
-</script>
+	
+	var ctx = document.getElementById("pie_chart");
+	var pie_chart = new Chart(ctx, {
+		type: "doughnut",
+		data: {
+			datasets : [{ 
+				data: {{ pie_chart_values|safe }},
+				backgroundColor: {{ pie_colors|safe }}
+			}],
+			labels : [" Com avaliações", "Sem Avaliações"],
+		},
+		options : {
+			title : {
+				position:"top",
+				display:true,
+				text:"Quantitativo de avaliações",
+				fontSize:25,
+				padding:20
+			}
+		}
+	});
 
+</script>
 {% endblock %}

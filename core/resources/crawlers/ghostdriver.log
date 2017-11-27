@@ -1,0 +1,68 @@
+[INFO  - 2017-11-26T22:16:40.890Z] GhostDriver - Main - running on port 51120
+[INFO  - 2017-11-26T22:16:44.199Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-11-26T22:16:44.199Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.customHeaders:  - {}
+[INFO  - 2017-11-26T22:16:44.199Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-11-26T22:16:44.199Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7c471dc0-d2f7-11e7-8351-b590e8161b01
+[ERROR - 2017-11-26T22:16:51.208Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - msg: ReferenceError: Can't find variable: s_gi
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.209Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - stack:
+  (anonymous function) (https://assets.adobedtm.com/a5fa26c3da5356c4d77ae8244dc4eb5096e2f4b0/scripts/satellite-596fda5664746d3738001275.js:3)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.307Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - msg: ReferenceError: Can't find variable: s_gi
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.307Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - stack:
+  (anonymous function) (https://assets.adobedtm.com/a5fa26c3da5356c4d77ae8244dc4eb5096e2f4b0/scripts/satellite-596fda5664746d3738001275.js:3)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.407Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - msg: ReferenceError: Can't find variable: s_gi
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.407Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - stack:
+  (anonymous function) (https://assets.adobedtm.com/a5fa26c3da5356c4d77ae8244dc4eb5096e2f4b0/scripts/satellite-596fda5664746d3738001275.js:3)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.507Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - msg: ReferenceError: Can't find variable: s_gi
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.507Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - stack:
+  (anonymous function) (https://assets.adobedtm.com/a5fa26c3da5356c4d77ae8244dc4eb5096e2f4b0/scripts/satellite-596fda5664746d3738001275.js:3)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.607Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - msg: ReferenceError: Can't find variable: s_gi
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:16:51.607Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - stack:
+  (anonymous function) (https://assets.adobedtm.com/a5fa26c3da5356c4d77ae8244dc4eb5096e2f4b0/scripts/satellite-596fda5664746d3738001275.js:3)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:17:06.862Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - msg: TypeError: null is not an object (evaluating 'this.iframe.contentWindow')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:17:06.862Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - stack:
+  sendMessages (undefined:90)
+  requestToProcess (:88)
+  attachIframe (:88)
+  G (:115)
+  (anonymous function) (:116)
+  (anonymous function) (:111)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:17:06.930Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - msg: TypeError: undefined is not an object (evaluating 'location.state.category')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-11-26T22:17:06.930Z] Session [7c471dc0-d2f7-11e7-8351-b590e8161b01] - page.onError - stack:
+  onPopState (https://staticv2-4.rottentomatoes.com/static/dist/media-browser.js:4046)
+  (anonymous function) (https://staticv2-4.rottentomatoes.com/static/dist/common-react-redux.js:37513)
+  forEach (:0)
+  notifyListeners (https://staticv2-4.rottentomatoes.com/static/dist/common-react-redux.js:37512)
+  setState (https://staticv2-4.rottentomatoes.com/static/dist/common-react-redux.js:35495)
+  (anonymous function) (https://staticv2-4.rottentomatoes.com/static/dist/common-react-redux.js:35521)
+  confirmTransitionTo (https://staticv2-4.rottentomatoes.com/static/dist/common-react-redux.js:37491)
+  (anonymous function) (https://staticv2-4.rottentomatoes.com/static/dist/common-react-redux.js:35519)
+  handlePop (https://staticv2-4.rottentomatoes.com/static/dist/common-react-redux.js:35526)
+  handlePopState (https://staticv2-4.rottentomatoes.com/static/dist/common-react-redux.js:35502)
+
+  phantomjs://platform/console++.js:263 in error

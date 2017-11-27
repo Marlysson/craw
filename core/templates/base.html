@@ -2,8 +2,36 @@
 <html>
 <head>
 	<title>Visualização das coletas - Craw</title>
-
 </head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+<style type="text/css">
+
+	.bigger-chart{
+		width:70vw;
+		margin:0 auto;
+	}
+
+	.half-chart{
+		width:45vw;
+		padding-bottom:10px;
+	}
+
+	/*.left { float:left; }
+	.right { float:right; }*/
+
+	.row-container{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width:75vw;
+		min-height:300px;
+		overflow:auto;
+		/*border:1px solid #ccc;*/
+		margin:40px auto;
+	}
+
+</style>
 <body>
 
 {% block content %}

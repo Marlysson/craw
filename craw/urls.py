@@ -18,8 +18,6 @@ from django.contrib import admin
 from core import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^world-cup/$',views.view_world_cup_expenses),
-    url(r'^reviews$',views.series_review)
-
+    url(r'^reviews$',views.tv_series_review),
+    url(r'^world-cup/$',views.view_world_cup_expenses)
 ]
