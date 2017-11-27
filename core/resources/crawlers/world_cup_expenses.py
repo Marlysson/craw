@@ -48,7 +48,10 @@ for spent in root:
     negotiated = spent.find("valorTotalPrevisto")
 
     # Removing all "empreendimentos" that haven't negotiated value defined
-    if negotiated is not None:
+    city = spent.find("cidadeSede")
+
+
+    if negotiated is not None and city.find("descricao").text != "Internacional":
 
         theme = spent.find("tema").find("descricao").text       
         

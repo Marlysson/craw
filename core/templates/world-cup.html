@@ -2,8 +2,12 @@
 
 {% block content%}
 
-<div style="width:75vw;margin:20px auto;">
-    <canvas id="myChart"></canvas>  
+<div class="bigger-chart">
+    <canvas id="bar-chart"></canvas>  
+</div>
+
+<div class="bigger-chart left">
+        <canvas id="pie-chart"></canvas>
 </div>
 
 
@@ -13,16 +17,16 @@
 
 <script type="text/javascript">
 
-    var ctx = document.getElementById("myChart");
+    var ctx = document.getElementById("bar-chart");
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'horizontalBar',
         data: {
-            labels:{{ labels|safe }},
+            labels: {{ label_countries|safe }},
             datasets: [{
                 label: 'Valores gastos estimados',
-                data: {{ values }},
-                backgroundColor: {{ background_color|safe }},
-                borderColor : {{ border_color|safe }},
+                data: {{ values_negotiated|safe }},
+                backgroundColor: {{ background|safe }},
+                borderColor : {{ border|safe }},
                 borderWidth : 1.5,
             }]
 
@@ -54,15 +58,15 @@
                     },
 
                     label : function(tooltipItem,chart){
-                        number = new Number(tooltipItem.yLabel);
-                        return number.toLocaleString(undefined, {maximumFractionDigits:2})
+                        number = new Number(tooltipItem.xLabel);
+                        return "R$ " + number.toLocaleString(undefined, {maximumFractionDigits:2})
                     }
                     
                 }
             },
 
             scales: {
-                yAxes: [{
+                xAxes: [{
                     ticks: {
                         callback: function(value, index, values) {
                             return value.toLocaleString();
@@ -75,4 +79,52 @@
 
 </script>
 
+<script type="text/javascript">
+    
+    var ctx = document.getElementById("pie-chart");
+    var pie_chart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            datasets : [{ 
+                data: {{ values_type_construction|safe }},
+                backgroundColor: {{ color_pie|safe }}
+            }],
+            labels : {{ labels_type_construction|safe }} ,
+        },
+        options : {
+            title : {
+                position:"top",
+                display:true,
+                text:"Gastos por tipo de obras",
+                fontSize:25,
+                padding:40
+            },
+            legend : {
+                display:true,
+                position:"right"
+            },
+            tooltips: {
+                callbacks : {
+
+                    label : function(tooltip,data){
+                        console.log(tooltip)
+                        index = tooltip.index
+                        value = data.datasets[0].data[index];
+
+                        label = data.labels[index];
+
+                        number = new Number(value);
+                        number = number.toLocaleString(undefined, {maximumFractionDigits:2})
+
+                        return label +": R$" +number;
+                    }
+                    
+                }
+            },
+
+        }
+    });
+
+</script>
+</script>
 {% endblock %}

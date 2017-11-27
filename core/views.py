@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .utils import load_formatted, generate_colors
 from random import sample
+from collections import defaultdict
 
 def tv_series_review(request):
 
@@ -71,18 +72,39 @@ def view_world_cup_expenses(request):
 
 	content = load_formatted("world_cup_expenses.csv")
 
-	labels = [line["uf"] for line in content]
-	values = [float(line["negociado"].strip()) for line in content]
+	spent_countries = {}
 
-	background_color, border_color = generate_colors(len(labels),alpha=0.2)
+	for spent in content:
+		if spent["uf"] in spent_countries:
+			spent_countries[spent["uf"]] += float(spent["negociado"])
+		else:
+			spent_countries[spent["uf"]] = 0.0
+		
+	background , border = generate_colors(len(list(spent_countries)))
 	
+	labels, values = [] , []	
+
+	for item in spent_countries:
+		labels.append(item)
+		values.append(spent_countries[item])
+
+	# Gasto por tipo de infraestrutura
+
+	types_construction = defaultdict(float)
+
+	for item in content:
+		types_construction[item["tema"]] += float(item["negociado"])
+
+	colors_pie = generate_colors(len(types_construction),different=True)
+
 	context = {
-		"labels": labels,
-		"values": values,
-		"background_color": background_color,
-		"border_color": border_color
+		"label_countries" : labels,
+		"values_negotiated" : values,
+		"labels_type_construction": list(types_construction.keys()),
+		"values_type_construction": list(types_construction.values()),
+		"background": background,
+		"border": border,
+		"color_pie" : colors_pie
 	}
 
 	return render(request,"world-cup.html",context)
-
-

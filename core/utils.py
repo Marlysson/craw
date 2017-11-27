@@ -21,7 +21,7 @@ def load_formatted(file_name):
 		file_content = csv.DictReader(csv_file,delimiter=",")
 		return [dict(line) for line in file_content]
 
-def generate_colors(count=None,alpha=1,different=False):
+def generate_colors(count=None,alpha=0.5,different=False):
 
 	if different:
 		colors = []
