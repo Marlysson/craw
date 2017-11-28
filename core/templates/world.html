@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<div class="bigger-chart">
+    <canvas id="most_populate"></canvas>
+</div>
+
+<h4 style="font-size:27px;text-align:center;font-weight:bold;color:#666;font-family: 'Arial'">Densidade populacional</h4>
+
+<div id="world" style="width:60vw;height:500px;margin:20px auto;"></div>
+
+<form>
+    
+    África <input type="radio" name="region" class="region" value="Africa">
+    Europa <input type="radio" name="region" class="region" value="Europe">
+    Americas <input type="radio" name="region" class="region" value="Americas">
+    Asia <input type="radio" name="region" class="region" value="Asia">
+    Oceania <input type="radio" name="region" class="region" value="Oceania">
+    Normal <input type="radio" name="region" class="region" value="Normal">
+
+</form>
+<div class="bigger-chart">
+    <canvas id="larger_areas"></canvas>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+<script type="text/javascript">
+
+    var ctx = document.getElementById("most_populate");
+    var chart_bar_review = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels:{{ most_populate_label|safe }},
+            datasets: [{
+                label: 'Países mais populosos',
+                data: {{ most_populate_data|safe }},
+                backgroundColor: {{ background|safe }},
+                borderColor: {{ border|safe}},
+                borderWidth: 2.5
+            },]
+        },
+        options: {
+            title : {
+                    display:true,
+                    text:"Os países mais populosos do mundo",
+                    fontSize:25,
+                    padding:20
+            },
+            tooltips: {
+                callbacks : {
+
+                    title : function(tooltipItem,chart){
+                        return "Habitantes";
+                    },
+
+                    label : function(tooltip,data){
+
+                        number = new Number(tooltip.yLabel);
+                        number = number.toLocaleString(undefined, {maximumFractionDigits:2})
+
+                        return tooltip.xLabel + ": " + number;
+                    }
+                    
+                }
+            }
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+        
+  google.charts.load('current', {
+    'packages':['geochart'],
+    'mapsApiKey': 'AIzaSyCDIgIniE8CkzUjNoAxFoNbNowHcWBpBoY',
+    "callback" : drawRegionsMap
+  });
+  google.charts.setOnLoadCallback(drawRegionsMap);
+
+  var chart;
+
+  var regions_map = {
+    "Africa": '002',
+    "Europe": '150',
+    "Americas": '019',
+    "Asia": '142',
+    "Oceania": '009',
+    "Normal": undefined
+  }
+
+  function drawRegionsMap() {
+    var data = google.visualization.arrayToDataTable({{world_map_density|safe}});
+
+    var chart = new google.visualization.GeoChart(document.getElementById('world'));
+
+    var options = {
+        colorAxis: {colors: ['#ffcdd2', 'red']},
+    };
+
+    chart.draw(data,options);
+
+    regions = document.querySelectorAll(".region");
+
+    regions.forEach(function(element){
+        element.addEventListener("click",function(event){
+
+            region = this.getAttribute("value");
+
+            var options = {
+                region : regions_map[region]
+            }
+
+            chart.draw(data,options);
+
+        });
+        
+    })
+
+  }
+
+
+</script>
+
+<script type="text/javascript">
+
+    var ctx = document.getElementById("larger_areas");
+    var chart_bar_review = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels:{{ most_larger_area_label|safe }},
+            datasets: [{
+                label: 'Países com maiores áreas',
+                data: {{ most_larger_area_values|safe }},
+                backgroundColor: {{ background|safe }},
+                borderColor: {{ border|safe}},
+                borderWidth: 2.5
+            },]
+        },
+        options: {
+            title : {
+                    display:true,
+                    text:"Países com maiores extensões territoriais",
+                    fontSize:25,
+                    padding:20
+            },
+            tooltips: {
+                callbacks : {
+
+                    title : function(tooltipItem,chart){
+                        return "Território";
+                    },
+
+                    label : function(tooltip,data){
+
+                        number = new Number(tooltip.yLabel);
+                        number = number.toLocaleString(undefined, {maximumFractionDigits:2})
+
+                        return tooltip.xLabel + ": " + number + " km";
+                    }
+                    
+                }
+            }
+        }
+    });
+
+</script>
+
+{% endblock %}

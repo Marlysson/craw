@@ -167,3 +167,53 @@ def view_world_cup_expenses(request):
 	}
 
 	return render(request,"world-cup.html",context)
+
+def world(request):
+
+	world = load_formatted("countries_infos.csv")
+	sorted_world_population = sort_it(world,"populacao")
+
+	labels_population , values_population = [] , []
+	labels_area, values_area = [] , []
+
+	# Chart of area most populous and largest areas
+
+	for country in sorted_world_population[:10]:
+		labels_population.append(country["nome"])
+		values_population.append(country["populacao"])
+
+	for country in sort_it(world,"area")[:10]:
+		labels_area.append(country["nome"])
+		values_area.append(country["area"])
+
+	background, border = generate_colors(len(labels_population))
+
+	data_world_map = []
+
+	# Density world map
+	for country in sorted_world_population:
+		if float(country["densidade"]) < 1000: 
+			# Removind OUTLIERS
+
+			# Value defined by my mind to remove all greater than it
+			# A value that would be considered "normalized" to see every differents colors in map
+
+			data_world_map.append([country["nome"],float(country["densidade"])])
+
+	data_world_map.insert(0,["País","Densidade"])
+
+	context = {
+		"most_populate_label": labels_population,
+		"most_populate_data" : values_population,
+		
+		"most_larger_area_label": labels_area,
+		"most_larger_area_values": values_area,
+		
+		"background": background,
+		"border": border,
+
+		"world_map_density": data_world_map,
+
+	}
+
+	return render(request,"world.html",context)

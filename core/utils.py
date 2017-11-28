@@ -50,5 +50,9 @@ def generate_colors(count=None,alpha=0.5,different=False):
 
 		return background_color , border_color
 
-def sort_it(dictionary):
-	return sorted(dictionary.items(),key=lambda x : x[1], reverse=True)
+def sort_it(type_python,value_to_order=None):
+
+	if isinstance(type_python,dict):
+		return sorted(type_python.items(),key=lambda x : x[1], reverse=True)
+	elif isinstance(type_python,list):
+		return (sorted(type_python,key=lambda x : float(x[value_to_order]),reverse=True))

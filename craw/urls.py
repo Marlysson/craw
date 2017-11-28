@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^reviews$',views.tv_series_review),
     url(r'^world-cup/$',views.view_world_cup_expenses),
     url(r'^films-money/$',views.films_money),
+    url(r'^world/$',views.world),
 
 ]
