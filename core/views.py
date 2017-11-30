@@ -2,218 +2,239 @@ from django.shortcuts import render
 from .utils import load_formatted, generate_colors , sort_it
 from random import sample
 from collections import defaultdict
+from datetime import datetime
+from random import randint
 
 def tv_series_review(request):
 
-	content = load_formatted("tvlist_scores.csv")
-	series_without_review = []
+    content = load_formatted("tvlist_scores.csv")
+    series_without_review = []
 
-	labels = []
-	values = []
-	pie_colors = []
+    labels = []
+    values = []
+    pie_colors = []
 
-	data_tv_series = {}
+    data_tv_series = {}
 
-	for item in content:
-		if item["classificacao"] != "Sem avaliação":
-			data_tv_series[item["nome"]] = float(item["classificacao"].replace("%",""))
-		else:
-			series_without_review.append(item["nome"])
+    for item in content:
+        if item["classificacao"] != "Sem avaliação":
+            data_tv_series[item["nome"]] = float(item["classificacao"].replace("%",""))
+        else:
+            series_without_review.append(item["nome"])
 
-	data_tv_series = sort_it(data_tv_series)
+    data_tv_series = sort_it(data_tv_series)
 
-	for item,value in data_tv_series:
-		labels.append(item)
-		values.append(value)
+    for item,value in data_tv_series:
+        labels.append(item)
+        values.append(value)
 
-	background_color, border_color = generate_colors(len(data_tv_series))
+    background_color, border_color = generate_colors(len(data_tv_series))
 
-	pie_colors = generate_colors(len(labels),different=True)
+    pie_colors = generate_colors(len(labels),different=True)
 
-	context = {
-		"labels":labels,
-		"values":values,
-		"background": background_color,
-		"border": border_color,
-		"pie_chart_values": [len(content) - len(series_without_review) , len(series_without_review)],
-		"pie_colors": pie_colors,
-		"series_without_review":series_without_review
-	}
+    context = {
+        "labels":labels,
+        "values":values,
+        "background": background_color,
+        "border": border_color,
+        "pie_chart_values": [len(content) - len(series_without_review) , len(series_without_review)],
+        "pie_colors": pie_colors,
+        "series_without_review":series_without_review
+    }
 
-	return render(request,"review_series.html",context)
+    return render(request,"review_series.html",context)
 
 def films_money(request):
 
-	content = load_formatted("films_money.csv")
-	
-	labels, values_weekend, values_total,weeks_ranking = [], [], [], []
+    content = load_formatted("films_money.csv")
+    
+    labels, values_weekend, values_total,weeks_ranking = [], [], [], []
 
-	for item in content:
-		labels.append(item["nome"])
-		values_weekend.append(float(item["valor_semanal"]))
-		values_total.append(float(item["valor_acumulado"]))
-		weeks_ranking.append(int(item["quantidade_semanas"]))
+    for item in content:
+        labels.append(item["nome"])
+        values_weekend.append(float(item["valor_semanal"]))
+        values_total.append(float(item["valor_acumulado"]))
+        weeks_ranking.append(int(item["quantidade_semanas"]))
 
-	background_color_one , color_border_one = generate_colors(len(labels),alpha=0.5)
-	background_color_two , color_border_two = generate_colors(len(labels),alpha=0.5)
-	background_three = generate_colors(len(labels),different=True)
+    background_color_one , color_border_one = generate_colors(len(labels),alpha=0.5)
+    background_color_two , color_border_two = generate_colors(len(labels),alpha=0.5)
+    background_three = generate_colors(len(labels),different=True)
 
-	context = {
-		"labels":labels,
-		"values_weekend":values_weekend,
-		"values_total":values_total,
-		"weeks_ranking":weeks_ranking,
-		"background_one": background_color_one,
-		"border_one":color_border_one,
-		"background_two":background_color_two,
-		"border_two":color_border_two,
-		"background_three":background_three
-	}
+    context = {
+        "labels":labels,
+        "values_weekend":values_weekend,
+        "values_total":values_total,
+        "weeks_ranking":weeks_ranking,
+        "background_one": background_color_one,
+        "border_one":color_border_one,
+        "background_two":background_color_two,
+        "border_two":color_border_two,
+        "background_three":background_three
+    }
 
-	return render(request,"films-money.html",context)
+    return render(request,"films-money.html",context)
 
 def view_world_cup_expenses(request):
 
-	content = load_formatted("world_cup_expenses.csv")
+    content = load_formatted("world_cup_expenses.csv")
 
-	spent_countries = {}
+    spent_countries = {}
 
-	# Gasto por Estado
+    # Gasto por Estado
 
-	spent_countries = defaultdict(float)
+    spent_countries = defaultdict(float)
 
-	for spent in content:
-		spent_countries[spent["uf"]] += float(spent["negociado"])
-	
-	spent_countries = sort_it(spent_countries)
+    for spent in content:
+        spent_countries[spent["uf"]] += float(spent["negociado"])
+    
+    spent_countries = sort_it(spent_countries)
 
-	background , border = generate_colors(len(list(spent_countries)))
-	
-	labels, values = [] , []	
+    background , border = generate_colors(len(list(spent_countries)))
+    
+    labels, values = [] , []    
 
-	for item,value in spent_countries:
-		labels.append(item)
-		values.append(value)
+    for item,value in spent_countries:
+        labels.append(item)
+        values.append(value)
 
-	# Gasto por tipo de construção ( Aeroporto , Mobilidade Urbana )
+    # Gasto por tipo de construção ( Aeroporto , Mobilidade Urbana )
 
-	types_construction = defaultdict(float)
+    types_construction = defaultdict(float)
 
-	for item in content:
-		types_construction[item["tema"]] += float(item["negociado"])
+    for item in content:
+        types_construction[item["tema"]] += float(item["negociado"])
 
-	colors_pie = generate_colors(len(types_construction),different=True)
+    colors_pie = generate_colors(len(types_construction),different=True)
 
-	# Gasto por Instituição Construtora
+    # Gasto por Instituição Construtora
 
-	institution = defaultdict(float)
+    institution = defaultdict(float)
 
-	for spent in content:
-		institution[spent["instituicao"]] += float(spent["negociado"])
+    for spent in content:
+        institution[spent["instituicao"]] += float(spent["negociado"])
 
-	institution = sort_it(institution)
+    institution = sort_it(institution)
 
-	institution_labels , institution_values = [] , []
+    institution_labels , institution_values = [] , []
 
-	for institution,value in institution:
-		institution_labels.append(institution)
-		institution_values.append(value)
+    for institution,value in institution:
+        institution_labels.append(institution)
+        institution_values.append(value)
 
-	background_institution , border_institution = generate_colors(len(institution_labels))
+    background_institution , border_institution = generate_colors(len(institution_labels))
 
-	# Gasto por tipo de instituição ( Federal , Estadual , Privada )
-	# Valores e Quantidade de Obras
+    # Gasto por tipo de instituição ( Federal , Estadual , Privada )
+    # Valores e Quantidade de Obras
 
-	types_construction_count = defaultdict(int)
-	types_construction_spents = defaultdict(float)
+    types_construction_count = defaultdict(int)
+    types_construction_spents = defaultdict(float)
 
-	for spent in content:
-		types_construction_count[spent["tipo_instituicao"]] += 1
-		types_construction_spents[spent["tipo_instituicao"]] += float(spent["negociado"])
+    for spent in content:
+        types_construction_count[spent["tipo_instituicao"]] += 1
+        types_construction_spents[spent["tipo_instituicao"]] += float(spent["negociado"])
 
-	colors_pie_types_construction_count = generate_colors(len(types_construction_count),different=True)
-	colors_pie_types_construction_spents = generate_colors(len(types_construction_spents),different=True)
+    colors_pie_types_construction_count = generate_colors(len(types_construction_count),different=True)
+    colors_pie_types_construction_spents = generate_colors(len(types_construction_spents),different=True)
 
-	types_spents = [sum([float(item["negociado"]) for item in content]), sum([float(item["executado"]) for item in content])]
+    types_spents = [sum([float(item["negociado"]) for item in content]), sum([float(item["executado"]) for item in content])]
 
-	colors_type_spent = generate_colors(len(types_spents),different=True)
+    colors_type_spent = generate_colors(len(types_spents),different=True)
 
 
-	context = {
-		"label_countries" : labels,
-		"values_negotiated" : values,
-		"background": background,
-		"border": border,
+    context = {
+        "label_countries" : labels,
+        "values_negotiated" : values,
+        "background": background,
+        "border": border,
 
-		"types_spents": types_spents,
-		"colors_total_spents_type": colors_type_spent,
+        "types_spents": types_spents,
+        "colors_total_spents_type": colors_type_spent,
 
-		"labels_type_construction": list(types_construction.keys()),
-		"values_type_construction": list(types_construction.values()),
-		"color_pie" : colors_pie,
+        "labels_type_construction": list(types_construction.keys()),
+        "values_type_construction": list(types_construction.values()),
+        "color_pie" : colors_pie,
 
-		"institution_label" : institution_labels,
-		"institution_values": institution_values,
-		"background_institution" : background_institution,
-		"border_institution": border_institution,
+        "institution_label" : institution_labels,
+        "institution_values": institution_values,
+        "background_institution" : background_institution,
+        "border_institution": border_institution,
 
-		"label_type_institution_count" : list(types_construction_count.keys()),
-		"values_type_institution_count" : list(types_construction_count.values()),
-		"color_pie_construction_count" : colors_pie_types_construction_count,
+        "label_type_institution_count" : list(types_construction_count.keys()),
+        "values_type_institution_count" : list(types_construction_count.values()),
+        "color_pie_construction_count" : colors_pie_types_construction_count,
 
-		"label_type_institution_values" : list(types_construction_spents.keys()),
-		"values_type_institution_values" : list(types_construction_spents.values()),
-		"color_pie_construction_values" : colors_pie_types_construction_spents
-	}
+        "label_type_institution_values" : list(types_construction_spents.keys()),
+        "values_type_institution_values" : list(types_construction_spents.values()),
+        "color_pie_construction_values" : colors_pie_types_construction_spents
+    }
 
-	return render(request,"world-cup.html",context)
+    return render(request,"world-cup.html",context)
 
 def world(request):
 
-	world = load_formatted("countries_infos.csv")
-	sorted_world_population = sort_it(world,"populacao")
+    world = load_formatted("countries_infos.csv")
+    sorted_world_population = sort_it(world,"populacao")
 
-	labels_population , values_population = [] , []
-	labels_area, values_area = [] , []
+    labels_population , values_population = [] , []
+    labels_area, values_area = [] , []
 
-	# Chart of area most populous and largest areas
+    # Chart of area most populous and largest areas
 
-	for country in sorted_world_population[:10]:
-		labels_population.append(country["nome"])
-		values_population.append(country["populacao"])
+    for country in sorted_world_population[:10]:
+        labels_population.append(country["nome"])
+        values_population.append(country["populacao"])
 
-	for country in sort_it(world,"area")[:10]:
-		labels_area.append(country["nome"])
-		values_area.append(country["area"])
+    for country in sort_it(world,"area")[:10]:
+        labels_area.append(country["nome"])
+        values_area.append(country["area"])
 
-	background, border = generate_colors(len(labels_population))
+    background, border = generate_colors(len(labels_population))
 
-	data_world_map = []
+    data_world_map = []
 
-	# Density world map
-	for country in sorted_world_population:
-		if float(country["densidade"]) < 1000: 
-			# Removind OUTLIERS
+    # Density world map
+    for country in sorted_world_population:
+        if float(country["densidade"]) < 1000: 
+            # Removing OUTLIERS
 
-			# Value defined by my mind to remove all greater than it
-			# A value that would be considered "normalized" to see every differents colors in map
+            # Value defined by my mind to remove all greater than it
+            # A value that would be considered "normalized" to see every differents colors in map
 
-			data_world_map.append([country["nome"],float(country["densidade"])])
+            data_world_map.append([country["nome"],float(country["densidade"])])
 
-	data_world_map.insert(0,["País","Densidade"])
+    data_world_map.insert(0,["País","Densidade"])
 
-	context = {
-		"most_populate_label": labels_population,
-		"most_populate_data" : values_population,
-		
-		"most_larger_area_label": labels_area,
-		"most_larger_area_values": values_area,
-		
-		"background": background,
-		"border": border,
+    context = {
+        "most_populate_label": labels_population,
+        "most_populate_data" : values_population,
+        
+        "most_larger_area_label": labels_area,
+        "most_larger_area_values": values_area,
+        
+        "background": background,
+        "border": border,
 
-		"world_map_density": data_world_map,
+        "world_map_density": data_world_map,
 
-	}
+    }
 
-	return render(request,"world.html",context)
+    return render(request,"world.html",context)
+
+def clima_tempo(request):
+
+    temperatures = load_formatted("clima_tempo.csv")
+
+    # formatted_date = lambda x : datetime.strptime(x,"%Y/%m/%d %I:%M:%S")
+
+    # content = [dict(line) for line in temperatures]
+
+    # formatted = []
+
+    # for item in content:
+        # formatted.append({"time":formatted_date(item["time"]),"temperature":item["temperature"]})
+
+    context = {
+        "temperatures": temperatures
+    }
+
+    return render(request,"clima-tempo.html",context)

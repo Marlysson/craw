@@ -3,6 +3,7 @@ import requests
 import xml.etree.ElementTree as ET
 from os import path , getcwd
 import csv
+from datetime import datetime
 
 CRAWLER_DIR = path.dirname(getcwd())
 DATA_DIR = path.join(CRAWLER_DIR,"data")
@@ -11,7 +12,8 @@ URL_RESOURCES = {
     "world_cup": "http://www.portaltransparencia.gov.br/copa2014/api/rest/empreendimento",
     "countries_infos": "http://example.webscraping.com",
     "films_money": "http://www.imdb.com/chart/boxoffice",
-    "tv_list_scores": "https://www.rottentomatoes.com/browse/tv-list-1"
+    "tv_list_scores": "https://www.rottentomatoes.com/browse/tv-list-1",
+    "clima_tempo" : "https://www.climatempo.com.br/previsao-do-tempo/cidade/264/teresina-pi"
 }
 
 def save_file_as(scope):
@@ -59,3 +61,23 @@ def load_xml_resource(filename):
     with open(file_path) as xml:
         root = ET.fromstring(xml.read())
     return root
+
+def load_formatted(file_name):
+
+    file_name = path.join(DATA_DIR,file_name)
+
+    if path.exists(file_name):
+
+        with open(file_name,newline='') as csv_file:
+            file_content = csv.DictReader(csv_file,delimiter=",")
+
+            formatted = []
+
+            content = [dict(line) for line in file_content]
+
+            for item in content:
+                formatted.append({"time":item["time"],"temperature":item["temperature"]})
+
+            return formatted
+    else:
+        return []

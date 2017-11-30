@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+<h1 class="title-temperatures">Últimas {{ temperatures|length }} temperaturas lidas</h1>
+
+<div class="temperatures">
+
+	{% for temperature in temperatures %}	
+		<div class="temperature-component">
+			<h1 class="temperature-value">{{ temperature.temperature }}</h1>
+			<p class="temperature-time"> {{ temperature.time }} </p>
+		</div>
+	{% endfor %}
+
+</div>
+
+{% endblock %}
