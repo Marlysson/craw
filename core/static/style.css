@@ -1,0 +1,199 @@
+body {counter-reset: mensure;}
+
+*{
+	margin:0;
+	padding:0;
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+.body{
+	background:#f39c12;
+	width:100vw;
+	height:100vh;
+}
+
+.welcome{
+	font-size:50px;
+	padding-top:20px;
+}
+
+.subtitle{
+	margin-top:-15px;
+	font-size:25px;
+}
+
+.welcome,.subtitle{
+	text-align: center;
+	color:#ecf0f1;
+}
+
+.items-page{
+	display: flex;
+	flex-flow: column wrap;
+   	align-content: center;
+	margin:40px auto;
+}
+
+.item-page{
+	display: flex;
+	align-content: center;
+
+	background:#ecf0f1;
+	border:0;
+	padding:5px 10px;
+	
+	list-style-type: none;
+	color:#f39c12;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+
+.item-info{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	margin-top:5px;
+	margin-bottom:15px;
+}
+
+.resource{
+	width:71%;
+	color:#f39c12;
+	background:#ecf0f1;
+}
+
+.access{
+	width:27%;
+	font-size:13px;
+	text-decoration:none;
+	color:white;
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+
+	background:#2ecc71;
+	border:0;
+	font-weight: bold;
+
+	transition:0.3s background;
+
+}
+
+.access:hover{
+	background:#27ae60;
+}
+
+.bigger-chart{
+	width:70vw;
+	margin:0 auto 40px;
+}
+
+.half-chart{
+	width:40vw;
+	padding-bottom:10px;
+}
+
+.left { float:left; }
+.right { float:right; }
+
+.row-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:80vw;
+	min-height:300px;
+	overflow:auto;
+	margin:20px auto;
+}
+
+.title-temperatures{
+	text-align: center;
+	color:#34495e;
+	font-size:30px;
+	font-weight: bold;
+	margin:140px auto 50px;
+}
+
+.temperatures{
+	margin:0 auto 150px;
+	width:75vw;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.temperature-component{
+	width:140px;
+	height:90px;
+	border:3px solid #2980b9;
+	border-radius:10px;
+	box-shadow: 3px 3px #95a5a6;
+	background:white;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	position:relative;
+}
+
+.temperature-component:after{
+	content:" ";
+	width:150%;
+	height:2px;
+	left:100%;
+	background:#2980b9;
+	position:absolute;
+}
+
+.temperature-component:last-child:after, .temperature-component:first-child:before{
+	display: none;
+}
+
+.temperature-component:last-child:before{
+	content:"ATUAL";
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	line-height:30px;
+
+	width:100%;
+	height:30px;
+	background:#27ae60;
+
+	position:absolute;
+	bottom:-45px;
+	
+	border-radius:4px;
+
+	color:white;
+	font-weight: bold;
+	font-size:13px;
+
+}
+
+.temperature-value{
+	margin-top:5px;
+	font-size:40px;
+	position:relative;
+	color:#2980b9;
+}
+
+.temperature-value:after{
+	content:"º";
+	position:fixed;
+	font-size:20px;
+	color:#2980b9;
+}
+
+.temperature-time{
+	font-weight:bold;
+	color:#2980b9;
+	font-size:12px;
+}

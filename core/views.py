@@ -5,6 +5,9 @@ from collections import defaultdict
 from datetime import datetime
 from random import randint
 
+def index(request):
+    return render(request,"index.html",None)
+
 def tv_series_review(request):
 
     content = load_formatted("tvlist_scores.csv")

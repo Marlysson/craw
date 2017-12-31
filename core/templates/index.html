@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Página Inicial - CRAW {% endblock %}
+
+{% block content %}
+	
+	<div class="body">
+		
+		<h1 class="welcome">Olá, bem-vindo ao <i>Craw</i></h1>
+		<h2 class="subtitle">Um webcrawler automatizado de alguns sites</h2>
+
+		<ul class="items-page">
+
+			<li class="item-page">
+				Faturamento de Lançamentos
+
+				<li class="item-info">
+					<span class="resource">imdb.com</span>
+					<a href="{% url 'films-money' %}" class="access">ACESSAR</a>
+				</li>
+
+			</li>
+
+			<li class="item-page">
+				Avaliações de Séries
+
+				<li class="item-info">
+					<span class="resource">rottentomatoes.com</span>
+					<a href="{% url 'reviews' %}" class="access">ACESSAR</a>
+				</li>
+
+			</li>
+
+			<li class="item-page">
+				Informações sobre Países
+
+				<li class="item-info">
+					<span class="resource">example.webscraping.com</span>
+					<a href="{% url 'world' %}" class="access">ACESSAR</a>
+				</li>
+
+			</li>
+
+			<li class="item-page">
+				Gastos Copa 2014
+
+				<li class="item-info">
+					<span class="resource">portaltransparencia.gov.br</span>
+					<a href="{% url 'world-cup' %}" class="access">ACESSAR</a>
+				</li>
+
+			</li>
+
+			<li class="item-page">
+				Informações Meteorológicas
+
+				<li class="item-info">
+					<span class="resource">climatempo.com.br</span>
+					<a href="" class="access">ACESSAR</a>
+				</li>
+
+			</li>
+
+		</ul>
+
+	</div>
+
+{% endblock %}

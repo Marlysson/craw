@@ -18,10 +18,9 @@ from django.contrib import admin
 from core import views
 
 urlpatterns = [
-    url(r'^reviews$',views.tv_series_review),
-    url(r'^world-cup/$',views.view_world_cup_expenses),
-    url(r'^films-money/$',views.films_money),
-    url(r'^world/$',views.world),
-    url(r'^clima-tempo/$',views.clima_tempo,name="clima-tempo"),
-
+    url(r'^$',views.index),
+    url(r'^reviews/?$',views.tv_series_review,name="reviews"),
+    url(r'^world-cup/?$',views.view_world_cup_expenses,name="world-cup"),
+    url(r'^films-money/?$',views.films_money,name="films-money"),
+    url(r'^world/?$',views.world,name="world"),
 ]
