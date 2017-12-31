@@ -7,19 +7,19 @@ body {counter-reset: mensure;}
 }
 
 .body{
-	background:#f39c12;
+	background:#3498db;
 	width:100vw;
 	height:100vh;
 }
 
 .welcome{
 	font-size:50px;
-	padding-top:20px;
+	padding-top:25px;
 }
 
 .subtitle{
-	margin-top:-15px;
-	font-size:25px;
+	margin-top:-10px;
+	font-size:23px;
 }
 
 .welcome,.subtitle{
@@ -43,7 +43,7 @@ body {counter-reset: mensure;}
 	padding:5px 10px;
 	
 	list-style-type: none;
-	color:#f39c12;
+	color:#3498db;
 	text-decoration:none;
 	text-transform:uppercase;
 	font-weight: bold;
@@ -60,14 +60,13 @@ body {counter-reset: mensure;}
 
 .resource{
 	width:71%;
-	color:#f39c12;
+	color:#3498db;
 	background:#ecf0f1;
 }
 
 .access{
 	width:27%;
 	font-size:13px;
-	text-decoration:none;
 	color:white;
 	display: flex;
 
@@ -83,6 +82,8 @@ body {counter-reset: mensure;}
 }
 
 .access:hover{
+	color:white;
+	text-decoration:none;
 	background:#27ae60;
 }
 
